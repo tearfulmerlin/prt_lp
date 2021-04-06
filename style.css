@@ -1,104 +1,190 @@
 :root {
-  --dark-section-text: #F2F2F2;
-  --primary-accent: #EB5757;
-  --primary-accent-border: #FAFAFA;
-
-  --secondary-accent-border: red;
-  --secondary-accent: red;
+    --dark-section-text: #F2F2F2;
+    --primary-accent: #EB5757;
+    --primary-accent-border: #FAFAFA;
+    --secondary-accent-border: red;
+    --secondary-accent: red;
 }
 
 body {
-  /* background-color: #7e7e7e; */
-  font-family: "Roboto";
-  margin: 0;
+    /* background-color: #7e7e7e; */
+    font-family: "Roboto";
+    margin: 0;
 }
+
 .section-wrapper {
-  max-width: 990px;
-  margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+    max-width: 990px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
+
 button {
-  background: transparent;
-  border: none;
-  padding: 21px 32px;
+    background: transparent;
+    border: none;
+    padding: 21px 32px;
 }
+
 button.btn_primary {
-  background: var(--primary-accent);
-  border: 1px solid var(--primary-border);
-  box-sizing: border-box;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 18px;
-  color: var(--dark-section-text);
+    background: var(--primary-accent);
+    border: 1px solid var(--primary-border);
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--dark-section-text);
 }
+
 button.btn_secondary {
-  border: 1px solid var(--secondary-border);
-  background: rgba(255, 255, 255, 0.72);
-  box-sizing: border-box;
-  font-size: 18px;
-  color: #4A4A4A;
+    border: 1px solid var(--secondary-border);
+    background: rgba(255, 255, 255, 0.72);
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #4A4A4A;
 }
 
 .utp {
-  background: url(/assets/utp-bg.jpg) 50% 50%;
-  height: 800px;
-  max-width: 1440px;
-  margin: 0 auto;
+    position: relative;
+    /*background: url(/assets/utp-bg.jpg) 50% 50%; */
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.utp__bg {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(/assets/utp-bg.jpg) 50% 100%;
+    filter: brightness(0.3);
+    position: absolute;
+    z-index: -1;
+    -webkit-filter: brightness(0.3);
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
 }
+
 .header .contacts {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 .header .contacts a {
-  color: var(--dark-section-text);
-  font-size: 18px;
+    color: var(--dark-section-text);
+    font-size: 18px;
 }
 
 .navigation ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 .nav__list .item:not(:last-child) {
-  margin-right: 10px;
+    margin-right: 10px;
 }
+
 .nav__list .item a {
-  border: 1px solid red;
-  padding: 10px 10px;
-  text-decoration: none;
-  color: var(--dark-section-text);
+    border: 1px solid red;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: var(--dark-section-text);
 }
 
 .utp__content {
-  line-height: 1.3;
-  margin-top: 90px;
-  color: var(--dark-section-text);
+    line-height: 1.3;
+    margin-top: 50px;
+    color: var(--dark-section-text);
 }
+
+
+/* .utp__title {
+    background-color: rgba(0, 0, 0, .7);
+} */
+
 .utp__title .lvl1 {
-  font-size: 72px;
+    font-size: 72px;
 }
+
 .utp__title .lvl2 {
-  font-size: 32px;
+    font-size: 32px;
 }
+
 .utp__title .lvl3 {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: normal;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
 }
 
 .utp__buttons {
-  margin-top: 45px;
+    margin-top: 45px;
 }
 
 .utp__buttons .btn_primary {
-  margin-right: 20px;
+    margin-right: 20px;
+}
+
+.device__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.device__item {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.device__item .device__name {
+    font-size: 20px;
+}
+
+.device__item .device__description {
+    font-size: 16px;
+}
+
+.device__item .icon {
+    background-image: url("assets/icons/device_icons.png");
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+
+.icon.washing_machine {
+    background-position: -64px 0;
+}
+
+.icon.fridge {
+    background-position: 0 0;
+}
+
+.icon.tv {
+    background-position: 64px 0;
+}
+
+.icon.vacuum {
+    background-position: -320px 0;
+}
+
+.icon.microvawes {
+    background-position: 384px 0;
+}
+
+.icon.combine {
+    background-position: 192px 0;
+}
+
+.icon.pannel {
+    background-position: -256px 0;
+}
+
+.icon.hairdrier {
+    background-position: -128px 0;
 }
