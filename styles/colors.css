@@ -1,0 +1,39 @@
+html {
+  --gray1: #333333;
+  --gray2: #4F4F4F;
+  --gray3: #828282;
+  
+  /* light sections colors */
+  --dark-section-text: #F2F2F2;
+  --primary-accent-border: #FAFAFA;
+
+  /* dark section colors */
+  --primary-default: #F2F2F2;
+  --primary-accent: #EF7070;
+  
+  --secndary-light: ;
+  --secndary-lighter: ;
+  
+  --secndary-dark: ;
+  --secndary-darker: ;
+  
+  
+  --secndary-default: ;
+  --secndary-background: #FFFFFF;
+  --secondary-accent: red;
+  
+  --scondary-light: ;
+  --scondary-lighter: ;
+  
+  --scondary-dark: ;
+  --scondary-darker: ;
+
+  --asd: 1111px;
+
+  --sm-w: 600px;
+  --md-w: 900px;
+  --lg-w: 1200px;
+  --xl-w: 1800px;
+
+  --secondary-accent-border: red;
+}
