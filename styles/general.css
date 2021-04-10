@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+
 body {
   /* background-color: #7e7e7e; */
   font-family: "Roboto";
@@ -9,29 +17,29 @@ body {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
+}*/
+.lower-case {
+  text-transform: lowercase;
 }
 button {
   background: transparent;
   border: none;
-  padding: 21px 32px;
+  padding: 0;
 }
-button.btn_primary {
+.btn_primary {
   background: var(--primary-accent);
-  border: 1px solid var(--primary-border);
+  border: 1px solid var(--primary-accent-border);
   box-sizing: border-box;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 18px;
   color: var(--dark-section-text);
 }
-button.btn_secondary {
-  border: 1px solid var(--secondary-border);
+.btn_secondary {
+  border: 1px solid var(--secondary-accent-border);
   background: rgba(255, 255, 255, 0.72);
   box-sizing: border-box;
-  font-size: 18px;
   color: #4A4A4A;
-}
-*/
+} 
 
 /*.utp__content {
   line-height: 1.3;

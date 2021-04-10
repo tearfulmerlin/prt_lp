@@ -2,7 +2,6 @@
 
 .utp {
   background: url(/assets/utp-bg.jpg) 70% 50%;
-  height: 800px;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
@@ -12,7 +11,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
+  padding: 10px 0;
+  background-color: #0d0405cc;
 }
 .header .contacts {
   display: flex;
@@ -23,13 +23,78 @@
   font-size: 18px;
 }
 
-@media (max-width: 1800px) {}
-@media (max-width: 1200px) {}
 
-@media (max-width: 900px) {
+
+
+
+.devices {
+  background: linear-gradient(179.07deg, rgba(224, 224, 224, 0.55) 0.8%, rgba(196, 196, 196, 0) 117.22%);
+}
+.device__item {
+  display: flex;
+  align-items: center;
+}
+
+.device__icon {
+  height: 64px;
+  width: 64px;
+  background-image: url(../assets/device_icons.png);
+  margin-right: 10px;
+}
+
+.pannel {
+  background-position: -256px 0;
+}
+.combine {
+  background-position: -192px 0;
+}
+.dryer {
+  background-position: -128px 0;
+}
+.washmachine {
+  background-position: -64px 0;
+}
+.fridge {
+  background-position: 0 0;
+}
+.tv {
+  background-position: 64px 0;
+}
+.microwave {
+  background-position: 128px 0;
+}
+.vacuum {
+  background-position: 256px 0;
+}
+
+@media (max-width: 600px) {
+  .devices {
+    padding: 45px 10px 70px;
+  }
+
+  .device__title {
+    margin-bottom: 30px;
+  }
+
+  .device__title,
+  .device__list {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .device__item {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* @media (max-width: 1800px) {} */
+/* @media (max-width: 1200px) {} */
+
+/* @media (max-width: 900px) {
   .utp {
     background: url(/assets/utp-bg.jpg) no-repeat;
-    background-size: contain;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -49,16 +114,40 @@
     font-size: 16px;
     font-weight: 400;
   }
-}
+} */
 
 @media (max-width: 600px) {
   .utp {
-    background: url(/assets/utp-bg-600w.jpg) no-repeat;
+    background: #090100 url(/assets/utp-bg-768w.jpg) 50% 100% no-repeat;
     background-size: cover;
-    height: 800px;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 10px 45px;
+  }
+
+  .company {
+    color: var(--dark-section-text);
+    margin: 20px 0 40px;
+    font-size: 14px;
+  }
+
+  .utp__title {
+    color: var(--dark-section-text);
+    text-shadow: 0 0px 15px black;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.9px;
+  }
+  .utp__title__lvl1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .utp__title__lvl2 {
+    font-size: 16px;
+  }
+  .utp__title__lvl3 {
+    font-size: 14px;
+    font-weight: 500;
   }
 
   .header {
@@ -77,5 +166,19 @@
   .header .contacts a {
     font-size: 16px;
     font-weight: 400;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px 25px;
+    font-size: 14px;
+    max-width: auto;
+  }
+  .utp .btn_primary {
+    margin-top: 20px;
+  }
+  .utp__buttons .btn_secondary {
+    margin-top: 15px;
   }
 }

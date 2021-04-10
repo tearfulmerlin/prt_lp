@@ -1,11 +1,9 @@
 html {
   --gray1: #333333;
   --gray2: #4F4F4F;
-  --gray3: #828282;
-  
-  /* light sections colors */
-  --dark-section-text: #F2F2F2;
-  --primary-accent-border: #FAFAFA;
+  --gray4: #5B5B5B;
+  --gray5: #828282;
+  --gray6: #FAFAFA;
 
   /* dark section colors */
   --primary-default: #F2F2F2;
@@ -18,7 +16,7 @@ html {
   --secndary-darker: ;
   
   
-  --secndary-default: ;
+  --secndary-default: #F2F2F2;
   --secndary-background: #FFFFFF;
   --secondary-accent: red;
   
@@ -34,6 +32,9 @@ html {
   --md-w: 900px;
   --lg-w: 1200px;
   --xl-w: 1800px;
-
-  --secondary-accent-border: red;
+  
+  /* light sections colors */
+  --dark-section-text: var(--secndary-default);
+  --primary-accent-border: var(--gray6);
+  --secondary-accent-border: var(--gray5);
 }
