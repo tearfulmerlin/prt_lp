@@ -41,14 +41,15 @@
   grid-row: 1;
   width: 40px;
 }
-.contacts{
+.header__contacts {
   grid-column: 2;
   grid-row: 1;
 }
 
-.header .contacts a {
+.header .header__contacts a {
   font-size: 16px;
   font-weight: 400;
+  color: var(--dark-section-text);
 }
 .nav__list {
   position: absolute;
@@ -173,12 +174,12 @@
     grid-row: 1;
     width: 40px;
   }
-  .contacts{
+  .header__contacts {
     grid-column: 2;
     grid-row: 1;
   }
 
-  .header .contacts a {
+  .header .header__contacts a {
     font-size: 16px;
     font-weight: 400;
   }
