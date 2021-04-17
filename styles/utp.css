@@ -136,9 +136,6 @@
 }
 
 @media (max-width: 600px) {
-  .devices {
-  }
-
   .device__title {
     margin-bottom: 30px;
   }
@@ -183,8 +180,6 @@
 }
 
 @media (max-width: 600px) {
-  .waranty {
-  }
   .waranty:after {
     background-position: 90% 80px;
     z-index: -1;
@@ -225,9 +220,6 @@
 }
 
 @media (max-width: 600px) {
-  .sattv {
-  }
-  
   .sattv__list {
     margin-top: 30px;
   }
@@ -316,4 +308,54 @@
   .contacts__hours {
     font-size: 16px;
   }
+}
+
+.popup {
+  position: fixed;
+}
+
+.popuped .popup {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.popuped .wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000e0;
+  height: 100%;
+  width: 100%;
+}
+.popuped .popup__form {
+  position: relative;
+  display: flex;
+  padding: 30px 10px;
+  flex-direction: column;
+  border: 1px solid gray;
+  background-color: #fff;
+  font-size: 16px;
+}
+.popup__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 15px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+body.popuped {
+  overflow: hidden;
 }

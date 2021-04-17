@@ -15,7 +15,7 @@
     <section class="utp">
       <header class="header section-wrapper">
         <a href="#"><img src="assets/header-logo.png" alt="ТОВ 'побутрадіотехніка'" class="logo"></a>
-        <nav class="navigation">
+        <!-- <nav class="navigation">
           <a href="#" class="menu_icon">
             <span class="menu_line"></span>
             <span class="menu_line"></span>
@@ -28,7 +28,7 @@
             <li class="item"><a href="#" class="nav__link">Супутникове</a></li>
             <li class="item"><a href="#" class="nav__link">Схема проїзду</a></li>
           </ul>
-        </nav>
+        </nav> -->
         <div class="header__contacts">
           <a href="tel:+380671447294" class="phone">+38 (067) 144-72-94</a>
           <!-- <a href="tel:+380414221536" class="phone">+38 (04142) 2-15-36</a> -->
@@ -51,8 +51,20 @@
           </span>
         </h1>
         <div class="utp__buttons">
-          <button class="btn btn_primary lead">Залишити заявку</button>
-          <button class="btn btn_secondary map">Подивитись схему проїзду</button>
+          <button
+            class="btn btn_primary lead"
+            data-source="utp_lead"
+            onclick="openPopup(event)"
+          >
+            Залишити заявку
+          </button>
+          <button
+            class="btn btn_secondary map"
+            data-source="utp_map"
+            onclick="openPopup(event)"
+          >
+            Подивитись схему проїзду
+          </button>
         </div>
       </div>
     </section>
@@ -125,7 +137,9 @@
             </div>
           </li>
         </ul>
-        <button class="btn btn_primary lead">Залишити заявку на ремонт</button>
+        <button class="btn btn_primary lead" data-source="device_lead" onclick="openPopup(event)">
+          Залишити заявку на ремонт
+        </button>
       </div>
     </section>
     <section class="waranty">
@@ -155,7 +169,7 @@
             </div>
           </li>
         </ul>
-        <button class="btn btn_primary lead">Залишити заявку на ремонт</button>
+        <button class="btn btn_primary lead" data-source="waranty_lead" onclick="openPopup(event)">Залишити заявку на ремонт</button>
       </div>
     </section>
     <section class="sattv">
@@ -207,8 +221,8 @@
           <img src="./assets/extratv.png" alt="" class="sattv__extratv">
         </div>
         <div class="sattv__buttons">
-          <button class="btn btn_actions btn_positive map">Дізнатись більше</button>
-          <button class="btn btn_details btn_primary lead">Залишити заявку</button>
+          <button class="btn btn_actions btn_positive map" data-source="sattv_map" onclick="openPopup(event)">Дізнатись більше</button>
+          <button class="btn btn_details btn_primary lead" data-source="sattv_lead" onclick="openPopup(event)">Залишити заявку</button>
         </div>
       </div>
     </section>
@@ -250,5 +264,37 @@
       <footer class="footer"></footer>
     </section>
   </main>
+  <section class="popup">
+    <div class="wrapper" onclick=""></div>
+    <form
+      action=""
+      class="popup__form"
+      onsubmit="submitForm(event)"
+      data-source="default"
+    >
+      <h2 class="popup__title">Залиште свої контактні данні</h2>
+      <label for="">
+        Ім'я
+        <br>
+        <input
+          type="text"
+          name="name"
+          autocomplete="name"
+          class="input popup__input popup__form-name"
+        >
+      </label>
+      <label for="">
+        Телефон
+        <br>
+        <input
+          type="text"
+          name="phone"
+          autocomplete="phone"
+          class="input popup__input popup__form-phone"
+        >
+      </label>
+      <button class="btn btn_primary" type="submit">Відправити</button>
+    </form>
+  </section>
 </body>
 </html>
