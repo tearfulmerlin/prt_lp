@@ -1,14 +1,50 @@
+@import './colors.css';
+@import './style-common.css';
+
+.content {
+  margin: 0 40px;
+}
+
 .btn {
-  width: 100%;
   max-width: 350px;
   padding: 15px 25px;
   font-size: 14px;
   max-width: auto;
 }
+
+.nav__list {
+  display: flex;
+}
+
+.menu_icon {
+  display: none;
+}
+
+.nav__close {
+  display: none;
+}
+
+.nav__list .item {
+  margin-right: 15px;
+}
+
+.nav__list .item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  color: var(--primary-default);
+}
+
+.utp__buttons {
+  margin-top: 45px;
+}
+
 .utp .btn_primary {
+  margin-right: 25px;
 }
-.utp__buttons .btn_secondary {
-}
+
+.utp__buttons .btn_secondary {}
 
 
 /* utp */
@@ -18,23 +54,29 @@
   background-size: cover;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 0px;
+  padding: 0 35px 125px;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 0;
   background-color: #0d0405cc;
 }
-.header .contacts {
+
+.header__contacts .phone {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
-.header__contacts a {
+
+.header__contacts .phone {
   color: var(--dark-section-text);
   font-size: 18px;
+}
+
+.header__contacts .phone:before {
+  content: url(/assets/phone_icon.png);
 }
 
 .company {
@@ -50,13 +92,16 @@
   line-height: 1.4;
   letter-spacing: 0.9px;
 }
+
 .utp__title__lvl1 {
   font-size: 72px;
   font-weight: 700;
 }
+
 .utp__title__lvl2 {
   font-size: 32px;
 }
+
 .utp__title__lvl3 {
   font-size: 24px;
   font-weight: 500;

@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ремонт побутової техніки в Бердичеві та Бердичівському районі</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style-600w.css" media="(max-width: 600px)" />
+  <link rel="stylesheet" href="styles/style-900w.css" media="(min-width: 601px) and (max-width: 900px)" />
+  <link rel="stylesheet" href="styles/style-1200w.css" media="(min-width: 901px) and (max-width: 1200px)" />
+  <link rel="stylesheet" href="styles/style-1200w-plus.css" media="(min-width: 1201px)" />
   <script src="scirpts.js"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 </head>
+
 <body>
   <main class="main">
     <section class="utp">
       <header class="header section-wrapper">
-        <a href="#"><img src="assets/header-logo.png" alt="ТОВ 'побутрадіотехніка'" class="logo"></a>
-        <!-- <nav class="navigation">
+        <a href="#"><img src="assets/header-logo.png" alt="ТОВ 'побутрадіотехніка'" class="logo" /></a>
+        <nav class="navigation">
           <a href="#" class="menu_icon">
             <span class="menu_line"></span>
             <span class="menu_line"></span>
             <span class="menu_line"></span>
           </a>
           <ul class="nav__list close">
-            <li class="item"><a href="#" class="nav__link">Закрити -></a></li>
+            <li class="item"><a href="#" class="nav__link nav__close">Закрити -></a></li>
             <li class="item"><a href="#" class="nav__link">Послуги</a></li>
             <li class="item"><a href="#" class="nav__link">Гарантія</a></li>
             <li class="item"><a href="#" class="nav__link">Супутникове</a></li>
             <li class="item"><a href="#" class="nav__link">Схема проїзду</a></li>
           </ul>
-        </nav> -->
+        </nav>
         <div class="header__contacts">
           <a href="tel:+380671447294" class="phone">+38 (067) 144-72-94</a>
           <!-- <a href="tel:+380414221536" class="phone">+38 (04142) 2-15-36</a> -->
@@ -37,46 +42,40 @@
       <div class="utp__content section-wrapper content">
         <p class="company">ТОВ “ПОБУТРАДІОТЕХНІКА”</p>
         <h1 class="utp__title">
-          <span class="utp__title__lvl1">Ремонт</span> <br>
+          <span class="utp__title__lvl1">Ремонт</span> <br />
           <span class="utp__title__lvl2">
-            телевізорів <br>
-            холодильників <br>
-            пральних машин <br>
-            мікрохвильових печей <br>
-          </span>
+							телевізорів <br />
+							холодильників <br />
+							пральних машин <br />
+							мікрохвильових печей <br />
+						</span>
           <span class="utp__title__lvl3">
-            <br>
-            <span class="lower-case">в </span>Бердичеві <br> 
-            <span class="lower-case">та </span>Бердичівському районі
+							<br />
+							<span class="lower-case">в </span>Бердичеві <br />
+          <span class="lower-case">та </span>Бердичівському районі
           </span>
         </h1>
         <div class="utp__buttons">
-          <button
-            class="btn btn_primary lead"
-            data-source="utp_lead"
-            onclick="openPopup(event)"
-          >
-            Залишити заявку
-          </button>
-          <button
-            class="btn btn_secondary map"
-            data-source="utp_map"
-            onclick="openPopup(event)"
-          >
-            Подивитись схему проїзду
-          </button>
+          <button class="btn btn_primary lead" data-source="utp_lead" onclick="openPopup(event)">
+							Залишити заявку
+						</button>
+          <button class="btn btn_secondary map" data-source="utp_map" onclick="openPopup(event)">
+							Подивитись схему проїзду
+						</button>
         </div>
       </div>
     </section>
     <section class="devices">
       <div class="content">
-        <h2 class="device__title">Ремонт великої <br> та дрібної техніки</h2>
+        <h2 class="device__title">
+          Ремонт великої <br /> та дрібної техніки
+        </h2>
         <ul class="device__list">
           <li class="device__item">
             <div class="device__icon washmachine"></div>
             <div class="device__heading">
               <span class="device__title">Пральні машини</span>
-              <br>
+              <br />
               <span class="device__description">від 300 грн</span>
             </div>
           </li>
@@ -84,7 +83,7 @@
             <div class="device__icon fridge"></div>
             <div class="device__heading">
               <span class="device__title">Холодильники</span>
-              <br>
+              <br />
               <span class="device__description">від 300 грн</span>
             </div>
           </li>
@@ -92,7 +91,7 @@
             <div class="device__icon tv"></div>
             <div class="device__heading">
               <span class="device__title">Телевізори</span>
-              <br>
+              <br />
               <span class="device__description">від 300 грн</span>
             </div>
           </li>
@@ -100,7 +99,7 @@
             <div class="device__icon vacuum"></div>
             <div class="device__heading">
               <span class="device__title">Пилососи</span>
-              <br>
+              <br />
               <span class="device__description">від 300 грн</span>
             </div>
           </li>
@@ -108,7 +107,7 @@
             <div class="device__icon microwave"></div>
             <div class="device__heading">
               <span class="device__title">Мікрохвильові печі</span>
-              <br>
+              <br />
               <span class="device__description">від 300 грн</span>
             </div>
           </li>
@@ -116,7 +115,7 @@
             <div class="device__icon combine"></div>
             <div class="device__heading">
               <span class="device__title">Кухонні комбайни</span>
-              <br>
+              <br />
               <span class="device__description">від 300 грн</span>
             </div>
           </li>
@@ -124,7 +123,7 @@
             <div class="device__icon pannel"></div>
             <div class="device__heading">
               <span class="device__title">Кухонні електроплити</span>
-              <br>
+              <br />
               <span class="device__description">від 300 грн</span>
             </div>
           </li>
@@ -132,14 +131,14 @@
             <div class="device__icon dryer"></div>
             <div class="device__heading">
               <span class="device__title">Фени, плойки та інше...</span>
-              <br>
+              <br />
               <span class="device__description">від 300 грн</span>
             </div>
           </li>
         </ul>
         <button class="btn btn_primary lead" data-source="device_lead" onclick="openPopup(event)">
-          Залишити заявку на ремонт
-        </button>
+						Залишити заявку на ремонт
+					</button>
       </div>
     </section>
     <section class="waranty">
@@ -155,11 +154,11 @@
           <li class="waranty__item">
             <div class="waranty__icon"></div>
             <div class="waranty__heading">
-              Безкоштовно відремонтуємо <br>
+              Безкоштовно відремонтуємо <br />
               <span class="waranty__description">
-                якщо пристрій знову вийде з ладу <br>
-                в період гарантії
-              </span>
+									якщо пристрій знову вийде з ладу <br />
+									в період гарантії
+								</span>
             </div>
           </li>
           <li class="waranty__item">
@@ -169,21 +168,20 @@
             </div>
           </li>
         </ul>
-        <button class="btn btn_primary lead" data-source="waranty_lead" onclick="openPopup(event)">Залишити заявку на ремонт</button>
+        <button class="btn btn_primary lead" data-source="waranty_lead" onclick="openPopup(event)">
+						Залишити заявку на ремонт
+					</button>
       </div>
     </section>
     <section class="sattv">
       <div class="content">
         <h2 class="sattv__title">
-          Установка супутникових антен
-          під ключ від 2990 грн.
+          Установка супутникових антен під ключ від 2990 грн.
         </h2>
         <ul class="sattv__list">
           <li class="sattv__item">
             <div class="waranty__icon"></div>
-            <div class="waranty__heading">
-              Установка супутникової антени
-            </div>
+            <div class="waranty__heading">Установка супутникової антени</div>
           </li>
           <li class="sattv__item">
             <div class="waranty__icon"></div>
@@ -193,14 +191,12 @@
           </li>
           <li class="sattv__item">
             <div class="waranty__icon"></div>
-            <div class="waranty__heading">
-              Підключення декількох ТВ
-            </div>
+            <div class="waranty__heading">Підключення декількох ТВ</div>
           </li>
           <li class="sattv__item">
             <div class="waranty__icon"></div>
             <div class="waranty__heading">
-              Гарантія 1 рік на роботи та матеріали 
+              Гарантія 1 рік на роботи та матеріали
             </div>
           </li>
           <li class="sattv__item">
@@ -217,12 +213,16 @@
           </li>
         </ul>
         <div class="sattv__providers">
-          <img src="./assets/viasat.png" alt="" class="sattv__viasat">
-          <img src="./assets/extratv.png" alt="" class="sattv__extratv">
+          <img src="./assets/viasat.png" alt="" class="sattv__viasat" />
+          <img src="./assets/extratv.png" alt="" class="sattv__extratv" />
         </div>
         <div class="sattv__buttons">
-          <button class="btn btn_actions btn_positive map" data-source="sattv_map" onclick="openPopup(event)">Дізнатись більше</button>
-          <button class="btn btn_details btn_primary lead" data-source="sattv_lead" onclick="openPopup(event)">Залишити заявку</button>
+          <button class="btn btn_actions btn_positive map" data-source="sattv_map" onclick="openPopup(event)">
+							Дізнатись більше
+						</button>
+          <button class="btn btn_details btn_primary lead" data-source="sattv_lead" onclick="openPopup(event)">
+							Залишити заявку
+						</button>
         </div>
       </div>
     </section>
@@ -231,70 +231,72 @@
       <div class="content">
         <h2 class="contacts__title">Контакти та схема проїзду</h2>
         <div class="contacts__address">
-          м. Бердичів, <br>
-          вул. Ново-Іванівська 44
+          м. Бердичів, <br /> вул. Ново-Іванівська 44
         </div>
         <ul class="contacts__phones-list">
           <li class="contacts__phone">
-            тел. 
-            <a href="tel:+380414221536" class="contacts__phone-link">+38 04142 2-15-36</a>
-          </li>
-          <li class="contacts__phone">
-            моб. 
-            <a href="tel:+380671447294" class="contacts__phone-link">+38 067 144-72-94</a>
-          </li>
-        </ul>
-        <div class="contacts__hours">
-          <h3 class="hours__title">Графік роботи:</h3>
-          <div class="hours__workdays">Пн - Пт: 9:00 - 17:00</div>
-          <div class="hours__saturday">Сб: 9:00 - 14:00</div>
-          <div class="hours__sunday">Нд: вихідний</div>
-        </div>
-      </div>
-      <div class="contacts__map">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.7072406774864!2d28.603999751537884!3d49.88552417930035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472cfbcf3f718389%3A0xec4297353d03241c!2sRempobuttekhnika!5e0!3m2!1sen!2sua!4v1618227596876!5m2!1sen!2sua"
-          width="100%"
-          height="250"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
-      <footer class="footer"></footer>
-    </section>
-  </main>
-  <section class="popup">
-    <div class="wrapper" onclick=""></div>
-    <form
-      action=""
-      class="popup__form"
-      onsubmit="submitForm(event)"
-      data-source="default"
-    >
-      <h2 class="popup__title">Залиште свої контактні данні</h2>
-      <label for="">
-        Ім'я
-        <br>
-        <input
-          type="text"
-          name="name"
-          autocomplete="name"
-          class="input popup__input popup__form-name"
-        >
-      </label>
-      <label for="">
-        Телефон
-        <br>
-        <input
-          type="text"
-          name="phone"
-          autocomplete="phone"
-          class="input popup__input popup__form-phone"
-        >
-      </label>
-      <button class="btn btn_primary" type="submit">Відправити</button>
-    </form>
-  </section>
-</body>
+            тел.
+            <a href="tel:+380414221536" class="contacts__phone-link">+38 04142 2-15-36</a
+							>
+						</li>
+						<li class="contacts__phone">
+							моб.
+							<a href="tel:+380671447294" class="contacts__phone-link"
+								>+38 067 144-72-94</a
+							>
+						</li>
+					</ul>
+					<div class="contacts__hours">
+						<h3 class="hours__title">Графік роботи:</h3>
+						<div class="hours__workdays">Пн - Пт: 9:00 - 17:00</div>
+						<div class="hours__saturday">Сб: 9:00 - 14:00</div>
+						<div class="hours__sunday">Нд: вихідний</div>
+					</div>
+				</div>
+				<div class="contacts__map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.7072406774864!2d28.603999751537884!3d49.88552417930035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472cfbcf3f718389%3A0xec4297353d03241c!2sRempobuttekhnika!5e0!3m2!1sen!2sua!4v1618227596876!5m2!1sen!2sua"
+						width="100%"
+						height="250"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+					></iframe>
+				</div>
+				<footer class="footer"></footer>
+			</section>
+		</main>
+		<section class="popup">
+			<div class="wrapper" onclick=""></div>
+			<form
+				action=""
+				class="popup__form"
+				onsubmit="submitForm(event)"
+				data-source="default"
+			>
+				<h2 class="popup__title">Залиште свої контактні данні</h2>
+				<label for="">
+					Ім'я
+					<br />
+					<input
+						type="text"
+						name="name"
+						autocomplete="name"
+						class="input popup__input popup__form-name"
+					/>
+				</label>
+				<label for="">
+					Телефон
+					<br />
+					<input
+						type="text"
+						name="phone"
+						autocomplete="phone"
+						class="input popup__input popup__form-phone"
+					/>
+				</label>
+				<button class="btn btn_primary" type="submit">Відправити</button>
+			</form>
+		</section>
+	</body>
 </html>
