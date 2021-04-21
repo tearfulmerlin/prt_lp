@@ -248,13 +248,6 @@
 
 /* utp */
 
-.utp {
-  background: url(/assets/utp-bg.jpg) 70% 50%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -274,9 +267,8 @@
 }
 
 .utp {
-  background: #090100 url(/assets/utp-bg-768w.jpg) 50% 100% no-repeat;
+  background: #090100 url(../assets/utp-bg-768w.jpg) 50% 100% no-repeat;
   background-size: cover;
-  max-width: 1440px;
   margin: 0 auto;
   padding: 0 10px 45px;
 }
