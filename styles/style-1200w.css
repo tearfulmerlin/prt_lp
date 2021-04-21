@@ -1,2 +1,421 @@
 @import './colors.css';
 @import './style-common.css';
+.desktop-hidden {
+  display: none!important;
+}
+
+.header {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 870px;
+}
+.section-title {
+  font-size: 52px;
+}
+
+.btn {
+  max-width: 350px;
+  padding: 15px 25px;
+  font-size: 16px;
+  max-width: auto;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.menu_icon {
+  display: none;
+}
+
+.nav__close {
+  display: none;
+}
+
+.nav__list .item {
+  margin-right: 15px;
+}
+
+.nav__list .item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  color: var(--primary-default);
+}
+
+.utp__buttons {
+  margin-top: 45px;
+}
+
+.utp .btn_primary {
+  margin-right: 25px;
+}
+
+/* utp */
+
+.utp {
+  background: url(/assets/utp-bg.jpg) 70% 100%;
+  background-size: cover;
+  margin: 0 auto;
+  padding: 0 35px 125px;
+  min-height: 75vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  background-color: #0d0405cc;
+}
+
+.header__contacts .phone {
+  display: flex;
+  align-items: center;
+}
+
+.header__contacts .phone {
+  color: var(--dark-section-text);
+  font-size: 18px;
+}
+
+.header__contacts .phone:before {
+  content: url(/assets/phone_icon.png);
+}
+
+.company {
+  color: var(--dark-section-text);
+  margin: 40px 0 70px;
+  font-size: 24px;
+}
+
+.utp__title {
+  color: var(--dark-section-text);
+  text-shadow: 0 0px 15px black;
+  text-transform: uppercase;
+  line-height: 1.4;
+  letter-spacing: 0.9px;
+}
+
+.utp__title__lvl1 {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.utp__title__lvl2 {
+  font-size: 32px;
+}
+
+.utp__title__lvl3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.utp__buttons {
+  display: flex;
+}
+
+.devices {
+  background: linear-gradient(179.07deg, rgba(224, 224, 224, 0.55) 0.8%, rgba(196, 196, 196, 0) 117.22%);
+  padding: 120px 25px;
+}
+
+.devices__title {
+  font-weight: bold;
+  line-height: 47px;
+}
+
+.device__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.device__item {
+  display: flex;
+  align-items: center;
+  min-width: 50%;
+}
+
+.device__icon {
+  height: 64px;
+  width: 64px;
+  background-image: url(../assets/device_icons.png);
+  margin-right: 15px;
+}
+
+.pannel {
+  background-position: -256px 0;
+}
+
+.combine {
+  background-position: -192px 0;
+}
+
+.dryer {
+  background-position: -128px 0;
+}
+
+.washmachine {
+  background-position: -64px 0;
+}
+
+.fridge {
+  background-position: 0 0;
+}
+
+.tv {
+  background-position: 64px 0;
+}
+
+.microwave {
+  background-position: 128px 0;
+}
+
+.vacuum {
+  background-position: 256px 0;
+}
+
+.device__title {
+  margin-bottom: 60px;
+  font-size: 22px;
+}
+
+.device__title,
+.device__list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.device__item {
+  margin-bottom: 30px;
+}
+
+.devices .btn_primary {
+  margin-top: 40px;
+}
+
+
+
+.waranty {
+  position: relative;
+  background: linear-gradient(179.07deg, rgba(224, 224, 224, 0.55) 0.8%, rgba(196, 196, 196, 0) 117.22%);
+  padding: 120px 25px;
+}
+.waranty:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('../assets/shield_full.png') no-repeat 75% 50%;
+  z-index: -1;
+}
+.waranty__list {
+  margin-top: 60px;
+}
+.waranty__item {
+  display: flex;
+  margin-top: 20px;
+}
+.waranty__item:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  margin-top: 3px;
+  border-radius: 50%;
+  background-color: var(--gray7);
+}
+.waranty__heading{
+  font-size: 20px;
+}
+.waranty__description {
+  font-size: 16px;
+}
+.waranty .btn_primary {
+  margin-top: 50px;
+}
+
+
+
+
+.sattv {
+  position: relative;
+  background: linear-gradient(179.07deg, rgba(224, 224, 224, 0.55) 0.8%, rgba(196, 196, 196, 0) 117.22%);
+  padding: 120px 25px;
+}
+.sattv:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('../assets/sattvbg_full.png') no-repeat 95% 50%;
+  z-index: -1;
+}
+.sattv:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('../assets/sat_antena.png') no-repeat 0 100%;
+  z-index: -1;
+}
+.sattv__heading {
+  line-height: 1.3;
+}
+.sattv__list {
+  margin-top: 60px;
+}
+.sattv__item {
+  display: flex;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.sattv__item:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  margin-top: 3px;
+  border-radius: 50%;
+  background-color: var(--gray7);
+}
+.sattv__buttons {
+  margin-top: 65px;
+}
+.sattv .btn_actions {
+  margin-right: 25px;
+}
+
+
+
+
+.contacts {
+  color: white;
+}
+.contacts__phone-link {
+  color: white;
+}
+
+.contacts {
+  position: relative;
+  background-image: linear-gradient( 180deg, #323232 0%, rgba(31, 31, 31, 0.92) 50%, rgba(0, 0, 0, 0.59) 100%);
+  padding: 120px 40px 40px;
+}
+
+.contacts::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../assets/footer_bg.jpg);
+  z-index: -1;
+}
+
+.contacts__address {
+  margin-top: 40px;
+  line-height: 1.5;
+}
+
+.contacts__phone {
+  margin-top: 40px;
+}
+
+.contacts__phone-link {
+  color: white;
+}
+
+.contacts__hours {
+  margin-top: 40px;
+}
+
+.hours__title {
+  padding-bottom: 10px;
+  font-size: 22px;
+}
+
+.contacts__hours>div {
+  padding-top: 8px;
+  font-size: 18px;
+}
+
+.contacts__map {
+  margin-top: 55px;
+}
+
+.contacts__address,
+.contacts__phones-list,
+.contacts__hours {
+  font-size: 22px;
+}
+
+
+
+.popup {
+  position: fixed;
+}
+
+.popuped .popup {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.popuped .wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000e0;
+  height: 100%;
+  width: 100%;
+}
+
+.popuped .popup__form {
+  position: relative;
+  display: flex;
+  padding: 45px 20px;
+  flex-direction: column;
+  border: 1px solid gray;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.popup__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 15px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+body.popuped {
+  overflow: hidden;
+}

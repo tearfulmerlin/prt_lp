@@ -3,7 +3,12 @@ html {
     --gray2: #4f4f4f;
     --gray4: #5b5b5b;
     --gray5: #828282;
+    --gray7: #C4C4C4;
     --gray6: #fafafa;
+    
+    --dark1: #1d1d1d;
+
+    --main-green: #3e8a28;
     /* dark section colors */
     --primary-default: #f2f2f2;
     --primary-accent: #ef7070;

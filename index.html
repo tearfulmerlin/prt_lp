@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles/style-600w.css" media="(max-width: 600px)" />
   <link rel="stylesheet" href="styles/style-900w.css" media="(min-width: 601px) and (max-width: 900px)" />
   <link rel="stylesheet" href="styles/style-1200w.css" media="(min-width: 901px) and (max-width: 1200px)" />
+  <link rel="stylesheet" href="styles/style-1200w.css" media="(min-width: 1201px)" />
   <link rel="stylesheet" href="styles/style-1200w-plus.css" media="(min-width: 1201px)" />
   <script src="scirpts.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -59,16 +60,17 @@
           <button class="btn btn_primary lead" data-source="utp_lead" onclick="openPopup(event)">
 							Залишити заявку
 						</button>
-          <button class="btn btn_secondary map" data-source="utp_map" onclick="openPopup(event)">
+          <!-- <a href="#contacts" class="btn btn_secondary map" data-source="utp_map" onclick="openPopup(event)"> -->
+          <a href="#contacts" class="btn btn_secondary map">
 							Подивитись схему проїзду
-						</button>
+          </a>
         </div>
       </div>
     </section>
     <section class="devices">
       <div class="content">
-        <h2 class="device__title">
-          Ремонт великої <br /> та дрібної техніки
+        <h2 class="section-title devices__title">
+          Ремонт великої <br class="tablet-hidden desktop-hidden"> та дрібної техніки
         </h2>
         <ul class="device__list">
           <li class="device__item">
@@ -143,7 +145,7 @@
     </section>
     <section class="waranty">
       <div class="content">
-        <h2 class="waranty__title">Гарантія на ремонт</h2>
+        <h2 class="section-title waranty__title">Гарантія на ремонт</h2>
         <ul class="waranty__list">
           <li class="waranty__item">
             <div class="waranty__icon"></div>
@@ -156,7 +158,7 @@
             <div class="waranty__heading">
               Безкоштовно відремонтуємо <br />
               <span class="waranty__description">
-									якщо пристрій знову вийде з ладу <br />
+									якщо пристрій знову вийде з ладу <br class="tablet-hidden desktop-hidden" />
 									в період гарантії
 								</span>
             </div>
@@ -175,44 +177,44 @@
     </section>
     <section class="sattv">
       <div class="content">
-        <h2 class="sattv__title">
-          Установка супутникових антен під ключ від 2990 грн.
+        <h2 class="section-title sattv__title">
+          Установка супутникових антен <br class="mobile-hidden"> під ключ від 2990 грн.
         </h2>
         <ul class="sattv__list">
           <li class="sattv__item">
-            <div class="waranty__icon"></div>
-            <div class="waranty__heading">Установка супутникової антени</div>
+            <div class="sattv__icon"></div>
+            <div class="sattv__heading">Установка супутникової антени</div>
           </li>
           <li class="sattv__item">
-            <div class="waranty__icon"></div>
-            <div class="waranty__heading">
+            <div class="sattv__icon"></div>
+            <div class="sattv__heading">
               Підключення до Viasat та Xtra TV
             </div>
           </li>
           <li class="sattv__item">
-            <div class="waranty__icon"></div>
-            <div class="waranty__heading">Підключення декількох ТВ</div>
+            <div class="sattv__icon"></div>
+            <div class="sattv__heading">Підключення декількох ТВ</div>
           </li>
           <li class="sattv__item">
-            <div class="waranty__icon"></div>
-            <div class="waranty__heading">
+            <div class="sattv__icon"></div>
+            <div class="sattv__heading">
               Гарантія 1 рік на роботи та матеріали
             </div>
           </li>
           <li class="sattv__item">
-            <div class="waranty__icon"></div>
-            <div class="waranty__heading">
+            <div class="sattv__icon"></div>
+            <div class="sattv__heading">
               Післягарантійне обсулговування та ремонт
             </div>
           </li>
           <li class="sattv__item">
             <div class="sattv__icon"></div>
             <div class="sattv__heading">
-              Використовуємо тільки якісне кріплення та супутникове обладнання
+              Використовуємо тільки якісне кріплення <br> та супутникове обладнання
             </div>
           </li>
         </ul>
-        <div class="sattv__providers">
+        <div class="sattv__providers tablet-hidden desktop-hidden">
           <img src="./assets/viasat.png" alt="" class="sattv__viasat" />
           <img src="./assets/extratv.png" alt="" class="sattv__extratv" />
         </div>
@@ -226,12 +228,12 @@
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="contacts__bg"></div>
       <div class="content">
-        <h2 class="contacts__title">Контакти та схема проїзду</h2>
+        <h2 class="section-title contacts__title">Контакти та схема проїзду</h2>
         <div class="contacts__address">
-          м. Бердичів, <br /> вул. Ново-Іванівська 44
+          м. Бердичів, <br class="tablet-hidden destop-hidden" /> вул. Ново-Іванівська 44
         </div>
         <ul class="contacts__phones-list">
           <li class="contacts__phone">
@@ -257,7 +259,7 @@
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.7072406774864!2d28.603999751537884!3d49.88552417930035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472cfbcf3f718389%3A0xec4297353d03241c!2sRempobuttekhnika!5e0!3m2!1sen!2sua!4v1618227596876!5m2!1sen!2sua"
 						width="100%"
-						height="250"
+						height="400"
 						style="border: 0"
 						allowfullscreen=""
 						loading="lazy"
