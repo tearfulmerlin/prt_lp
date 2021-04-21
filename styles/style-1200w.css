@@ -59,7 +59,7 @@
 /* utp */
 
 .utp {
-  background: url(/assets/utp-bg.jpg) 70% 100%;
+  background: url(../assets/utp-bg.jpg) 70% 100%;
   background-size: cover;
   margin: 0 auto;
   padding: 0 35px 125px;
@@ -85,7 +85,7 @@
 }
 
 .header__contacts .phone:before {
-  content: url(/assets/phone_icon.png);
+  content: url(../assets/phone_icon.png);
 }
 
 .company {
