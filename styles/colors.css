@@ -1,4 +1,6 @@
 html {
+  --z-index-popup: 10;
+
   --gray1: #333333;
   --gray2: #4f4f4f;
   --gray4: #5b5b5b;
