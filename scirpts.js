@@ -2,11 +2,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const navList = document.querySelector(".nav__list");
   const menuIcon = document.querySelector(".menu_icon");
   const closeItem = document.querySelector(".nav__link");
+  const navItems = document.querySelectorAll(".nav__item");
+  const goUpbutton = document.querySelector(".go-up");
 
   if (menuIcon) {
     menuIcon.addEventListener("click", (event) => {
       event.preventDefault();
-      navList.classList.toggle("close");
+      navList.classList.toggle("closed");
+      document.body.classList.toggle("nav__menu-opened");
       closeItem.focus();
     });
   }
@@ -14,10 +17,25 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (closeItem) {
     closeItem.addEventListener("click", (event) => {
       event.preventDefault();
-      navList.classList.toggle("close");
+      navList.classList.toggle("closed");
+      document.body.classList.toggle("nav__menu-opened");
       menuIcon.focus();
     });
   }
+
+  navItems.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      const srollTarget = document.querySelector(`#${event.target.dataset.id}`);
+
+      scroll({
+        top: srollTarget.offsetTop,
+        behavior: 'smooth',
+      })
+
+      navList.classList.add("closed");
+      document.body.classList.remove("nav__menu-opened");
+    })
+  });
 
   const popup = document.querySelector(".popup");
   const popupWrapper = document.querySelector(".popup");
@@ -30,6 +48,31 @@ window.addEventListener("DOMContentLoaded", (event) => {
     popup.classList.toggle("open");
     document.body.classList.toggle("popuped");
   });
+
+  let flag = false;
+  let trottle = false;
+  window.onscroll = function() {
+    if (!trottle) {
+      setTimeout(() => {trottle = !trottle}, 150 );
+    } else {
+      trottle = !trottle;
+      if (window.scrollY > window.innerHeight / 1.2 && flag === false) {
+        flag = !flag;
+        goUpbutton.classList.add('visible')
+      } else if (window.scrollY < window.innerHeight / 1.2 && flag === true) {
+        flag = !flag;
+        goUpbutton.classList.remove('visible')
+      }
+    }
+  }
+  goUpbutton.onclick = function(event) {
+    event.stopPropagation();
+
+    scroll({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
 });
 
 

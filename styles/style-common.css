@@ -34,13 +34,41 @@ button {
 
 .btn_secondary {
   border: 1px solid var(--secondary-accent-border);
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--main-neutral);
   box-sizing: border-box;
-  color: #4a4a4a;
+  color: var(--gray8);
 }
 
 .btn_positive {
-  background-color: #6fcf97;
+  background-color: var(--main-positive);
+}
+
+.go-up {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--main-neutral);
+  box-shadow: 0 0 5px 1px var(--dark1);
+  border-radius: 6px;
+}
+
+.go-up.visible {
+  display: block;
+}
+
+.go-up__arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -25%);
+  background-color: var(--main-green);
+  clip-path: polygon(50% 0, 100% 50%, 50% 20%, 0 50%);
 }
 
 
