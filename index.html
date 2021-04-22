@@ -20,19 +20,38 @@
   <main class="main">
     <section class="utp">
       <header class="header section-wrapper">
-        <a href="#"><img src="./assets/header-logo.png" alt="ТОВ 'побутрадіотехніка'" class="logo" /></a>
+        <a href="./"><img src="./assets/header-logo.png" alt="ТОВ 'побутрадіотехніка'" class="logo" /></a>
         <nav class="navigation">
-          <a href="#" class="menu_icon">
+          <a href="javascript:void(0)" class="menu_icon tablet-hidden desktop-hidden">
             <span class="menu_line"></span>
             <span class="menu_line"></span>
             <span class="menu_line"></span>
           </a>
-          <ul class="nav__list close">
-            <li class="item"><a href="#" class="nav__link nav__close">Закрити -></a></li>
-            <li class="item"><a href="#" class="nav__link">Послуги</a></li>
-            <li class="item"><a href="#" class="nav__link">Гарантія</a></li>
-            <li class="item"><a href="#" class="nav__link">Супутникове</a></li>
-            <li class="item"><a href="#" class="nav__link">Схема проїзду</a></li>
+          <ul class="nav__list closed">
+            <a href="#" class="nav__link nav__close tablet-hidden desktop-hidden" aria-label="закрити меню">
+              <span class="nav__close-line1"></span>
+              <span class="nav__close-line2"></span>
+            </a>
+            <li class="nav__item">
+              <a href="javascript:void(0)" class="nav__link" data-id="services">
+                Послуги
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="javascript:void(0)" class="nav__link" data-id="waranty">
+                Гарантія
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="javascript:void(0)" class="nav__link" data-id="sattv">
+                Супутникове ТВ
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="javascript:void(0)" class="nav__link" data-id="contacts">
+                Схема проїзду
+              </a>
+            </li>
           </ul>
         </nav>
         <div class="header__contacts">
@@ -67,7 +86,7 @@
         </div>
       </div>
     </section>
-    <section class="devices">
+    <section class="devices" id="services">
       <div class="content">
         <h2 class="section-title devices__title">
           Ремонт великої <br class="tablet-hidden desktop-hidden"> та дрібної техніки
@@ -143,7 +162,7 @@
 					</button>
       </div>
     </section>
-    <section class="waranty">
+    <section class="waranty" id="waranty">
       <div class="content">
         <h2 class="section-title waranty__title">Гарантія на ремонт</h2>
         <ul class="waranty__list">
@@ -175,7 +194,7 @@
 					</button>
       </div>
     </section>
-    <section class="sattv">
+    <section class="sattv" id="sattv">
       <div class="content">
         <h2 class="section-title sattv__title">
           Установка супутникових антен <br class="mobile-hidden"> під ключ від 2990 грн.
@@ -300,5 +319,9 @@
 				<button class="btn btn_primary" type="submit">Відправити</button>
 			</form>
 		</section>
-	</body>
+    <a href="javascript:void(0)" class="go-up" aria-label="повернутись на початок">
+      <span class="go-up__arrow"></span>
+    </a>
+</body>
+
 </html>

@@ -36,11 +36,11 @@
   display: none;
 }
 
-.nav__list .item {
+.nav__item {
   margin-right: 15px;
 }
 
-.nav__list .item:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
@@ -63,7 +63,6 @@
   background-size: cover;
   margin: 0 auto;
   padding: 0 35px 125px;
-  min-height: 75vh;
 }
 
 .header {
