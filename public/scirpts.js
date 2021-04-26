@@ -5,14 +5,19 @@ function submitForm(event) {
   const formData = new FormData(form);
   const name = formData.get("name");
   const phone = formData.get("phone");
-  fetch("send.php", {
+  fetch("/lead", {
       method: "POST",
       body: JSON.stringify({
         name,
         phone,
       }),
+      headers: {
+        'Content-Type': 'application/json',
+      }
     })
-    .then()
+    .then(data => {
+
+    })
     .catch();
 }
 
