@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const axios = require('axios');
 const app = express();
-const port = env.process.PORT || 80;
+const port = process.env.PORT || 80;
 app.use(bodyParser.json({ limit: '0.5mb', type: 'application/json' }));
 app.use(bodyParser.urlencoded({ limit: '0.5mb', extended: false, parameterLimit: 50000 }))
 app.use(express.static('public'));
