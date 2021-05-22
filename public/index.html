@@ -11,8 +11,7 @@
   <link rel="stylesheet" href="./styles/style-1200w.css" media="(min-width: 901px) and (max-width: 1200px)" />
   <link rel="stylesheet" href="./styles/style-1200w.css" media="(min-width: 1201px)" />
   <link rel="stylesheet" href="./styles/style-1200w-plus.css" media="(min-width: 1201px)" />
-  <script src="scirpts.js"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <script src="scirpts.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 </head>
 
@@ -99,7 +98,7 @@
             <div class="device__heading">
               <span class="device__title">Пральні машини</span>
               <br />
-              <span class="device__description">від 300 грн</span>
+              <span class="device__description">від 450 грн</span>
             </div>
           </li>
           <li class="device__item">
@@ -107,7 +106,7 @@
             <div class="device__heading">
               <span class="device__title">Холодильники</span>
               <br />
-              <span class="device__description">від 300 грн</span>
+              <span class="device__description">від 650 грн</span>
             </div>
           </li>
           <li class="device__item">
@@ -115,7 +114,7 @@
             <div class="device__heading">
               <span class="device__title">Телевізори</span>
               <br />
-              <span class="device__description">від 300 грн</span>
+              <span class="device__description">від 400 грн</span>
             </div>
           </li>
           <li class="device__item">
@@ -131,7 +130,7 @@
             <div class="device__heading">
               <span class="device__title">Мікрохвильові печі</span>
               <br />
-              <span class="device__description">від 300 грн</span>
+              <span class="device__description">від 350 грн</span>
             </div>
           </li>
           <li class="device__item">
@@ -139,7 +138,7 @@
             <div class="device__heading">
               <span class="device__title">Кухонні комбайни</span>
               <br />
-              <span class="device__description">від 300 грн</span>
+              <span class="device__description">від 550 грн</span>
             </div>
           </li>
           <li class="device__item">
@@ -147,18 +146,36 @@
             <div class="device__heading">
               <span class="device__title">Кухонні електроплити</span>
               <br />
-              <span class="device__description">від 300 грн</span>
+              <span class="device__description">від 650 грн</span>
             </div>
+          </li>
+          <li class="device__item">
+            <div class="device__icon boyler"></div>
+            <div class="device__heading">
+              <span class="device__title">Бойлери</span>
+              <br />
+              <span class="device__description">від 350 грн</span>
+            </div>
+          </li>
+          </li>
+          <li class="device__item">
+            <div class="device__icon heating"></div>
+            <div class="device__heading">
+              <span class="device__title">Системи опалення</span>
+              <br />
+              <span class="device__description">від 850 грн</span>
+            </div>
+          </li>
           </li>
           <li class="device__item">
             <div class="device__icon dryer"></div>
             <div class="device__heading">
               <span class="device__title">Фени, плойки та інше...</span>
               <br />
-              <span class="device__description">від 300 грн</span>
+              <span class="device__description">від 250 грн</span>
             </div>
           </li>
-        </ul>
+          </ul>
         <button class="btn btn_primary lead" data-source="device_lead" onclick="openPopup(event)">
 						Залишити заявку на ремонт
 					</button>
@@ -236,8 +253,8 @@
           </li>
         </ul>
         <div class="sattv__providers tablet-hidden desktop-hidden">
-          <img src="./assets/viasat.png" alt="" class="sattv__viasat" />
-          <img src="./assets/extratv.png" alt="" class="sattv__extratv" />
+          <img src="./assets/viasat.png" alt="" class="sattv__viasat" loading="lazy" />
+          <img src="./assets/extratv.png" alt="" class="sattv__extratv" loading="lazy" />
         </div>
         <div class="sattv__buttons">
           <button class="btn btn_actions btn_positive map" data-source="sattv_map" onclick="openPopup(event)">

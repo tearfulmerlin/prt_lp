@@ -144,36 +144,44 @@
   margin-right: 15px;
 }
 
-.pannel {
-  background-position: -256px 0;
-}
-
-.combine {
-  background-position: -192px 0;
-}
-
-.dryer {
-  background-position: -128px 0;
+.fridge {
+  background-position: 0 0;
 }
 
 .washmachine {
   background-position: -64px 0;
 }
 
-.fridge {
-  background-position: 0 0;
-}
-
-.tv {
-  background-position: 64px 0;
+.dryer {
+  background-position: -128px 0;
 }
 
 .microwave {
-  background-position: 128px 0;
+  background-position: -192px 0;
+}
+
+.pannel {
+  background-position: -256px 0;
 }
 
 .vacuum {
-  background-position: 256px 0;
+  background-position: -320px 0;
+}
+
+.combine {
+  background-position: -384px 0;
+}
+
+.tv {
+  background-position: -448px 0;
+}    
+
+.boyler {
+  background-position: -512px 0;
+}
+
+.heating {
+  background-position: -576px 0;
 }
 
 .device__title {
