@@ -1,3 +1,22 @@
+const createTimeout = (function createTimeoutCreator() {
+  let timeOut;
+  
+  return function({ success, disable}) {
+    if (!timeOut) {
+      timeOut = setTimeout(() => {
+        success.forEach((el) => {
+          el.classList.remove('show');
+        });
+        disable.forEach((el) => {
+          el.disabled=false;
+        });
+        
+        timeOut = null;
+      }, 5000);
+    }
+  }
+})();
+
 function submitForm(event) {
   event.preventDefault();
   const form = event.target;
@@ -5,6 +24,13 @@ function submitForm(event) {
   const formData = new FormData(form);
   const name = formData.get("name");
   const phone = formData.get("phone");
+  const errorMsg = document.querySelector('.submition-error');
+  const successMsg = document.querySelector('.submition-success');
+  form.children[5].disabled=true;
+
+  errorMsg.classList.remove('show');
+  successMsg.classList.remove('show');
+
   fetch("/lead", {
       method: "POST",
       body: JSON.stringify({
@@ -16,9 +42,22 @@ function submitForm(event) {
       }
     })
     .then(data => {
-
+      if (data.status === 200) {
+        successMsg.classList.toggle('show');
+        createTimeout({ success: [successMsg], disable: [form.children[5]]});
+        if (dataLayer) dataLayer.push({event: 'lead', action: 'success', source})
+      } else {
+        errorMsg.classList.toggle('show');
+        createTimeout({ success: [errorMsg], disable: [form.children[5]]});
+        if (dataLayer) dataLayer.push({event: 'lead', action: 'fail', source })
+      }
     })
-    .catch();
+    .catch(e => {
+      console.log(e);
+      errorMsg.classList.toggle('show');
+      createTimeout({ success: [errorMsg], disable: [form.children[5]]});
+      if (dataLayer) dataLayer.push({event: 'lead', action: 'fail', source })
+    });
 }
 
 function openPopup(event) {

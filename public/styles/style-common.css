@@ -71,6 +71,50 @@ button {
   clip-path: polygon(50% 0, 100% 50%, 50% 20%, 0 50%);
 }
 
+form {
+  max-width: 320px;
+}
+
+.submition-error {
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 0;
+  padding: 0 10px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #ebb6b6;
+  transition: height, padding-top, padding-bottom 0.4s ease-in-out;
+}
+
+.submition-error.show {
+  height: 20px;
+  padding: 20px 10px;
+  margin-bottom: 10px;
+}
+
+.submition-success {
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 0;
+  padding: 0 10px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #b6ebbf;
+  transition: height, padding-top, padding-bottom 0.4s ease-in-out;
+}
+
+.submition-success.show {
+  height: 20px;
+  padding: 20px 10px;
+  margin-bottom: 10px;
+}
+
+button:disabled {
+  background-color: rgb(66, 66, 66);
+  color: rgb(196, 196, 196);
+}
 
 /* @media (max-width: 1800px) {} */
 
