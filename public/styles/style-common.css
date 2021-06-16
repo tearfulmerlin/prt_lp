@@ -10,6 +10,7 @@ ul {
 body {
   font-family: "Roboto";
   margin: 0;
+  color: var(--gray1);
 }
 
 .lower-case {
@@ -114,6 +115,10 @@ form {
 button:disabled {
   background-color: rgb(66, 66, 66);
   color: rgb(196, 196, 196);
+}
+
+.sat-price {
+  color: var(--secndary-light);
 }
 
 /* @media (max-width: 1800px) {} */

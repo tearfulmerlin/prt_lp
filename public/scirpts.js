@@ -45,18 +45,18 @@ function submitForm(event) {
       if (data.status === 200) {
         successMsg.classList.toggle('show');
         createTimeout({ success: [successMsg], disable: [form.children[5]]});
-        if (dataLayer) dataLayer.push({event: 'lead', action: 'success', source})
+        if (window.dataLayer) dataLayer.push({event: 'lead', action: 'success', source})
       } else {
         errorMsg.classList.toggle('show');
         createTimeout({ success: [errorMsg], disable: [form.children[5]]});
-        if (dataLayer) dataLayer.push({event: 'lead', action: 'fail', source })
+        if (window.dataLayer) dataLayer.push({event: 'lead', action: 'fail', source })
       }
     })
     .catch(e => {
       console.log(e);
       errorMsg.classList.toggle('show');
       createTimeout({ success: [errorMsg], disable: [form.children[5]]});
-      if (dataLayer) dataLayer.push({event: 'lead', action: 'fail', source })
+      if (window.dataLayer) dataLayer.push({event: 'lead', action: 'fail', source })
     });
 }
 
