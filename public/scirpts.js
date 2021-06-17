@@ -46,6 +46,7 @@ function submitForm(event) {
         successMsg.classList.toggle('show');
         createTimeout({ success: [successMsg], disable: [form.children[5]]});
         if (window.dataLayer) dataLayer.push({event: 'lead', action: 'success', source})
+        if (window.ym) ym(80933992,'reachGoal','lead')
       } else {
         errorMsg.classList.toggle('show');
         createTimeout({ success: [errorMsg], disable: [form.children[5]]});
