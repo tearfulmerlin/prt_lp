@@ -121,10 +121,9 @@ button:disabled {
   color: var(--secndary-light);
 }
 
-/* @media (max-width: 1800px) {} */
 
+/* shared styles */
 
-/* @media (max-width: 1200px) {} */
-
-
-/* @media (max-width: 900px) {} */
+.utp {
+  background: var(--utp-bg);
+}

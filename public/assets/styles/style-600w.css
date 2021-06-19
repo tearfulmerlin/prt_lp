@@ -148,7 +148,6 @@ body.nav__menu-opened {
 }
 
 .utp {
-  background: #090100 url(../assets/utp-bg-768w.jpg) 50% 100% no-repeat;
   background-size: cover;
   margin: 0 auto;
   padding: 0 10px 45px;
@@ -236,7 +235,7 @@ body.nav__menu-opened {
 .device__icon {
   height: 64px;
   width: 64px;
-  background-image: url(../assets/device_icons.png);
+  background-image: url(../images/device_icons.png);
   margin-right: 10px;
 }
 
@@ -311,7 +310,7 @@ body.nav__menu-opened {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url('../assets/waranty_bg.svg') no-repeat;
+  background: url('../images/waranty_bg.svg') no-repeat;
 }
 
 .waranty__description {
@@ -407,7 +406,7 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url(../assets/footer_bg.jpg);
+  background-image: url(../images/footer_bg.jpg);
   z-index: -1;
 }
 

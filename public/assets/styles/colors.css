@@ -37,3 +37,21 @@ html {
   --primary-accent-border: var(--gray6);
   --secondary-accent-border: var(--gray5);
 }
+
+
+@media (min-width: 901px) {
+  .utp {
+    --utp-bg: url(../images/utp-bg.jpg) 70% 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .utp {
+    --utp-bg: url(../images/utp-bg.jpg) 70% 50%;
+  }
+}
+@media (max-width: 600px) {
+  .utp {
+    --utp-bg: #090100 url(../images/utp-bg-768w.jpg) 50% 100% no-repeat;
+  }
+}

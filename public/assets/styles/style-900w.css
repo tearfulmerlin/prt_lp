@@ -1,18 +1,12 @@
-.desktop-hidden {
+.tablet-hidden {
   display: none!important;
 }
 
-.header {
-  margin: 0 auto;
-  max-width: 900px;
-}
-
 .content {
-  margin: 0 auto;
-  max-width: 870px;
+  margin: 0;
 }
 .section-title {
-  font-size: 52px;
+  font-size: 40px;
 }
 
 .btn {
@@ -57,8 +51,8 @@
 /* utp */
 
 .utp {
-  background: url(../assets/utp-bg.jpg) 70% 100%;
   background-size: cover;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 35px 125px;
 }
@@ -82,12 +76,12 @@
 }
 
 .header__contacts .phone:before {
-  content: url(../assets/phone_icon.png);
+  content: url(../images/phone_icon.png);
 }
 
 .company {
   color: var(--dark-section-text);
-  margin: 40px 0 70px;
+  margin: 20px 0 40px;
   font-size: 24px;
 }
 
@@ -125,6 +119,7 @@
 .devices__title {
   font-weight: bold;
   line-height: 47px;
+  text-align: center;
 }
 
 .device__list {
@@ -142,7 +137,7 @@
 .device__icon {
   height: 64px;
   width: 64px;
-  background-image: url(../assets/device_icons.png);
+  background-image: url(../images/device_icons.png);
   margin-right: 15px;
 }
 
@@ -187,7 +182,7 @@
 }
 
 .device__title {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   font-size: 22px;
 }
 
@@ -198,14 +193,12 @@
 }
 
 .device__item {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .devices .btn_primary {
-  margin-top: 40px;
+  margin-top: 20px;
 }
-
-
 
 .waranty {
   position: relative;
@@ -219,7 +212,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: url('../assets/shield_full.png') no-repeat 75% 50%;
+  background: url('../images/shield.png') no-repeat 100% 50%;
   z-index: -1;
 }
 .waranty__list {
@@ -235,7 +228,6 @@
   width: 20px;
   height: 20px;
   margin-right: 20px;
-  margin-top: 3px;
   border-radius: 50%;
   background-color: var(--gray7);
 }
@@ -249,9 +241,6 @@
   margin-top: 50px;
 }
 
-
-
-
 .sattv {
   position: relative;
   background: linear-gradient(179.07deg, rgba(224, 224, 224, 0.55) 0.8%, rgba(196, 196, 196, 0) 117.22%);
@@ -264,21 +253,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: url('../assets/sattvbg_full.png') no-repeat 95% 50%;
+  background: url('../images/sattvbg.png') no-repeat 100% 50%;
   z-index: -1;
-}
-.sattv:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: url('../assets/sat_antena.png') no-repeat 0 100%;
-  z-index: -1;
-}
-.sattv__heading {
-  line-height: 1.3;
 }
 .sattv__list {
   margin-top: 60px;
@@ -294,7 +270,6 @@
   width: 20px;
   height: 20px;
   margin-right: 20px;
-  margin-top: 3px;
   border-radius: 50%;
   background-color: var(--gray7);
 }
@@ -304,9 +279,6 @@
 .sattv .btn_actions {
   margin-right: 25px;
 }
-
-
-
 
 .contacts {
   color: white;
@@ -318,7 +290,7 @@
 .contacts {
   position: relative;
   background-image: linear-gradient( 180deg, #323232 0%, rgba(31, 31, 31, 0.92) 50%, rgba(0, 0, 0, 0.59) 100%);
-  padding: 120px 40px 40px;
+  padding: 120px 40px 120px;
 }
 
 .contacts::after {
@@ -328,7 +300,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url(../assets/footer_bg.jpg);
+  background-image: url(../images/footer_bg.jpg);
   z-index: -1;
 }
 
@@ -368,8 +340,6 @@
 .contacts__hours {
   font-size: 22px;
 }
-
-
 
 .popup {
   position: fixed;
