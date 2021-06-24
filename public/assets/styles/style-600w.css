@@ -197,6 +197,10 @@ body.nav__menu-opened {
   font-weight: 400;
 }
 
+.utp__buttons {
+  flex-direction: column;
+}
+
 .btn {
   width: 100%;
   min-width: 250px;
