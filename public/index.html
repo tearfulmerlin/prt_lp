@@ -18,11 +18,11 @@
   <link rel="preload" as="image" href="assets/images/utp-bg.jpg" imagesrcset="./assets/images/utp-bg-mobile.jpg 400w, ./assets/images/utp-bg-768w.jpg 768w, ./assets/images/utp-bg-900w.jpg 900w, ./assets/images/utp-bg.jpg 901w" imagesizes="100vw">
   <link rel="preload" as="image" href="assets/images/header-logo.png">
 
-  <link rel="stylesheet preload" href="./assets/styles/colors.css"/>
-  <link rel="stylesheet preload" href="./assets/styles/style-common.css" />
-  <link rel="stylesheet preload" href="./assets/styles/style-600w.css" media="(max-width: 600px)" />
-  <link rel="stylesheet preload" href="./assets/styles/style-900w.css" media="(min-width: 601px) and (max-width: 900px)" />
-  <link rel="stylesheet preload" href="./assets/styles/style-1200w.css" media="(min-width: 901px)" />
+  <link rel="stylesheet preload" as="style" href="./assets/styles/colors.css"/>
+  <link rel="stylesheet preload" as="style" href="./assets/styles/style-common.css" />
+  <link rel="stylesheet preload"  as="style" href="./assets/styles/style-600w.css" media="(max-width: 600px)" />
+  <link rel="stylesheet preload" as="style" href="./assets/styles/style-900w.css" media="(min-width: 601px) and (max-width: 900px)" />
+  <link rel="stylesheet preload" as="style" href="./assets/styles/style-1200w.css" media="(min-width: 901px)" />
 </head>
 
 <body>
@@ -33,7 +33,15 @@
   <main class="main">
     <section class="utp">
       <header class="header section-wrapper">
-        <a href="./"><img src="./assets/images/header-logo.png" alt="ТОВ 'побутрадіотехніка'" class="logo" /></a>
+        <a href="./">
+          <img
+            src="./assets/images/header-logo.png"
+            alt="ТОВ 'побутрадіотехніка'"
+            class="logo"
+            width="40"
+            height="40"
+          />
+        </a>
         <nav class="navigation">
           <a href="javascript:void(0)" class="menu_icon tablet-hidden desktop-hidden">
             <span class="menu_line"></span>
@@ -264,8 +272,8 @@
           </li>
         </ul>
         <div class="sattv__providers tablet-hidden desktop-hidden">
-          <img src="./assets/images/viasat.png" alt="" class="sattv__viasat" loading="lazy" />
-          <img src="./assets/images/extratv.png" alt="" class="sattv__extratv" loading="lazy" />
+          <img width="69" height="71" src="./assets/images/viasat.png" alt="" class="sattv__viasat" loading="lazy" />
+          <img width="84" height="71"src="./assets/images/extratv.png" alt="" class="sattv__extratv" loading="lazy" />
         </div>
         <div class="sattv__buttons">
           <button class="btn btn_actions btn_positive map" data-source="sattv_map" onclick="openPopup(event)">
@@ -299,7 +307,7 @@
       </div>
       <div class="contacts__map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d642.679668810225!2d28.606319829263235!3d49.885309462812856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472cfbc33ac2576f%3A0x57cae2195b12abac!2z0J_QvtCx0YPRgtGA0LDQtNGW0L7RgtC10YXQvdGW0LrQsCAtINCR0LXRgNC00LjRh9GW0LI!5e0!3m2!1sen!2sua!4v1623748090489!5m2!1sen!2sua"
+          data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d642.679668810225!2d28.606319829263235!3d49.885309462812856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472cfbc33ac2576f%3A0x57cae2195b12abac!2z0J_QvtCx0YPRgtGA0LDQtNGW0L7RgtC10YXQvdGW0LrQsCAtINCR0LXRgNC00LjRh9GW0LI!5e0!3m2!1sen!2sua!4v1623748090489!5m2!1sen!2sua"
           width="100%"
           height="400"
           style="border: 0"
@@ -351,6 +359,30 @@
   </a>
 
   <script src="./assets/scripts/script.js" defer></script>
+  <script async>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N2ZJ2T4');
+  </script>
+  <script>
+  const options = {
+    root: document.body,
+    rootMargin: '50px 0px 0px 0px',
+    threshold: 0
+  }
+  const iframe = document.querySelector('.contacts__map iframe');
+
+
+  let observer = new IntersectionObserver(function() {
+    iframe.src = iframe.dataset.src;
+  }, options);
+
+  observer.observe(iframe);
+
+    
+  </script>
 </body>
 
 </html>
