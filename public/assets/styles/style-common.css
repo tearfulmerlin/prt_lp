@@ -9,7 +9,6 @@ ul {
 
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  margin: 0;
   color: var(--gray1);
 }
 
@@ -20,7 +19,6 @@ body {
 button {
   background: transparent;
   border: none;
-  padding: 0;
   box-shadow: 0px 2px 5px 2px #0000002e;
 }
 
@@ -124,6 +122,22 @@ button:disabled {
 
 /* shared styles */
 
+/* header */
+
+/* utp block */
 .utp {
   background: var(--utp-bg);
+  background-size: cover;
+  margin: 0 auto;
+  padding: var(--utp-padding);
+}
+
+.utp__company {
+  color: var(--dark-section-text);
+  margin: var(--utp_company_margin);
+  font-size: var(--utp_company_margin);
+}
+
+.utp__buttons {
+  display: flex;
 }

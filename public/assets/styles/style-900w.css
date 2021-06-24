@@ -51,10 +51,8 @@
 /* utp */
 
 .utp {
-  background-size: cover;
+  --utp-padding: 0 35px 125px;
   max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 35px 125px;
 }
 
 .header {
@@ -79,10 +77,9 @@
   content: url(../images/phone_icon.png);
 }
 
-.company {
-  color: var(--dark-section-text);
-  margin: 20px 0 40px;
-  font-size: 24px;
+.utp__company {
+  --utp_company_margin: 40px 0 70px;
+  --utp_company_font-size: 24px;
 }
 
 .utp__title {
@@ -107,9 +104,6 @@
   font-weight: 500;
 }
 
-.utp__buttons {
-  display: flex;
-}
 
 .devices {
   background: linear-gradient(179.07deg, rgba(224, 224, 224, 0.55) 0.8%, rgba(196, 196, 196, 0) 117.22%);

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://prt-service.com" />
   <title>Ремонт побутової техніки в Бердичеві та Бердичівському районі</title>
   <meta
     name="description"
@@ -12,24 +13,16 @@
       Ремонт великої та дрібної побутової техніки в Бердичеві та районі 
       ➤ Телефон ☎ 067 144-72-94 ✓ Безкоштовна діагностика ✓ Гарантія на ремонт.
     ">
-  <link rel="icon" type="image/png" href="./assets/images/icon.png"/>
-  <link rel="apple-touch-icon" href="./assets/images/icon57.png"/>
-  <link rel="preload" as="image" href="./assets/images/utp-bg.jpg" imagesrcset="./assets/images/utp-bg-mobile.jpg 400w, ./assets/images/utp-bg-768w.jpg 768w, ./assets/images/utp-bg-900w.jpg 900w, ./assets/images/utp-bg.jpg 901w" imagesizes="100vw">
-  <link rel="preload" as="image" href="./assets/images/header-logo.png">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/styles/colors.css"/>
-  <link rel="stylesheet" href="./assets/styles/style-common.css" />
-  <link rel="stylesheet" href="./assets/styles/style-600w.css" media="(max-width: 600px)" />
-  <link rel="stylesheet" href="./assets/styles/style-900w.css" media="(min-width: 601px) and (max-width: 900px)" />
-  <link rel="stylesheet" href="./assets/styles/style-1200w.css" media="(min-width: 901px)" />
-  <script src="./assets/scripts/script.js" defer></script>
+  <link rel="icon" type="image/png" href="assets/images/icon.png"/>
+  <link rel="apple-touch-icon" href="assets/images/icon57.png"/>
+  <link rel="preload" as="image" href="assets/images/utp-bg.jpg" imagesrcset="./assets/images/utp-bg-mobile.jpg 400w, ./assets/images/utp-bg-768w.jpg 768w, ./assets/images/utp-bg-900w.jpg 900w, ./assets/images/utp-bg.jpg 901w" imagesizes="100vw">
+  <link rel="preload" as="image" href="assets/images/header-logo.png">
 
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-N2ZJ2T4');</script>
+  <link rel="stylesheet preload" href="./assets/styles/colors.css"/>
+  <link rel="stylesheet preload" href="./assets/styles/style-common.css" />
+  <link rel="stylesheet preload" href="./assets/styles/style-600w.css" media="(max-width: 600px)" />
+  <link rel="stylesheet preload" href="./assets/styles/style-900w.css" media="(min-width: 601px) and (max-width: 900px)" />
+  <link rel="stylesheet preload" href="./assets/styles/style-1200w.css" media="(min-width: 901px)" />
 </head>
 
 <body>
@@ -81,7 +74,7 @@
         </div>
       </header>
       <div class="utp__content section-wrapper content">
-        <p class="company">ТОВ “ПОБУТРАДІОТЕХНІКА”</p>
+        <p class="utp__company">ТОВ “ПОБУТРАДІОТЕХНІКА”</p>
         <h1 class="utp__title">
           <span class="utp__title__lvl1">Ремонт</span> <br />
           <span class="utp__title__lvl2">
@@ -177,7 +170,6 @@
               <span class="device__description">від 350 грн</span>
             </div>
           </li>
-          </li>
           <li class="device__item">
             <div class="device__icon heating"></div>
             <div class="device__heading">
@@ -185,7 +177,6 @@
               <br />
               <span class="device__description">від 850 грн</span>
             </div>
-          </li>
           </li>
           <li class="device__item">
             <div class="device__icon dryer"></div>
@@ -195,10 +186,10 @@
               <span class="device__description">від 250 грн</span>
             </div>
           </li>
-          </ul>
+        </ul>
         <button class="btn btn_primary lead" data-source="device_lead" onclick="openPopup(event)">
-						Залишити заявку на ремонт
-					</button>
+          Залишити заявку на ремонт
+        </button>
       </div>
     </section>
     <section class="waranty" id="waranty">
@@ -322,7 +313,6 @@
   <section class="popup">
     <div class="wrapper" onclick=""></div>
     <form
-      action=""
       class="popup__form"
       onsubmit="submitForm(event)"
       data-source="default"
@@ -330,24 +320,24 @@
       <div class="error submition-error">Сталася помилка!</div>
       <div class="success submition-success">Ваша заявка успішно відправлена!</div>
       <h2 class="popup__title">Залиште свої контактні данні</h2>
-      <label for="">
+      <label>
         Ім'я
         <br />
         <input
           type="text"
           name="name"
-          autocomplete="name"
+          autocomplete="on"
           required
           class="input popup__input popup__form-name"
         />
       </label>
-      <label for="">
+      <label>
         Телефон
         <br />
         <input
           type="text"
           name="phone"
-          autocomplete="phone"
+          autocomplete="on"
           required
           class="input popup__input popup__form-phone"
           pattern_2="((\+380)|(380)|(80)|(0))[\d]{9}"
@@ -359,6 +349,8 @@
   <a href="javascript:void(0)" class="go-up" aria-label="повернутись на початок">
     <span class="go-up__arrow"></span>
   </a>
+
+  <script src="./assets/scripts/script.js" async></script>
 </body>
 
 </html>

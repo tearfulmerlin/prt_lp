@@ -126,9 +126,6 @@ body.nav__menu-opened {
   color: var(--dark-section-text);
 }
 
-
-/* utp */
-
 .header {
   display: flex;
   align-items: center;
@@ -147,16 +144,15 @@ body.nav__menu-opened {
   font-size: 18px;
 }
 
+
+/* utp */
 .utp {
-  background-size: cover;
-  margin: 0 auto;
-  padding: 0 10px 45px;
+  --utp-padding: 0 10px 45px;
 }
 
-.company {
-  color: var(--dark-section-text);
-  margin: 20px 0 60px;
-  font-size: 14px;
+.utp__company {
+  --utp_company_margin: 20px 0 60px;
+  --utp_company_font-size: 14px;
 }
 
 .utp__title {

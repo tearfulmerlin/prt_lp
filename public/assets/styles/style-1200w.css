@@ -55,13 +55,6 @@
 }
 
 /* utp */
-
-.utp {
-  background-size: cover;
-  margin: 0 auto;
-  padding: 0 35px 125px;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -84,10 +77,13 @@
   content: url(../images/phone_icon.png);
 }
 
-.company {
-  color: var(--dark-section-text);
-  margin: 40px 0 70px;
-  font-size: 24px;
+.utp {
+  --utp-padding: 0 35px 125px;
+}
+
+.utp__company {
+  --utp_company_margin: 40px 0 70px;
+  --utp_company_font-size: 24px;
 }
 
 .utp__title {
