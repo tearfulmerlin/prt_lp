@@ -9,9 +9,10 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const botToken = process.env.BOT_TOKEN;
+const chat_id = process.env.CHAT_ID;
 const sendMessageBot = async(data) => axios.post(
     `https://api.telegram.org/${botToken}/sendMessage`, {
-        chat_id: -1001321397381,
+        chat_id,
         parse_mode: 'Markdown',
         text: `
           *Нова заявка*
@@ -25,19 +26,20 @@ const sendMessageBot = async(data) => axios.post(
     }
 );
 
-
 app.use(sslRedirect(['production'], 301));
 app.use(bodyParser.json({ limit: '0.5mb', type: 'application/json' }));
 app.use(bodyParser.urlencoded({ limit: '0.5mb', extended: false, parameterLimit: 50000 }))
-app.use(express.static('public'));
+app.use(express.static('public', {
+  maxAge: '4320000',
+}));
 app.use(compression());
 
 app.post('/lead', function(req, res) {
     sendMessageBot(req.body)
         .then((tgResponce) => {
-            res.json({ staus: 'ok', ...tgResponce.data });
+            res.json({ message: 'success' });
         }).catch((err) => {
-            res.json({ staus: 'error' })
+            res.status(err.response.status).json({ staus: 'error' })
         });
 });
 

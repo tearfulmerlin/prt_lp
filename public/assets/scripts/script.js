@@ -54,7 +54,6 @@ function submitForm(event) {
       }
     })
     .catch(e => {
-      console.log(e);
       errorMsg.classList.toggle('show');
       createTimeout({ success: [errorMsg], disable: [form.children[5]]});
       if (window.dataLayer) dataLayer.push({event: 'lead', action: 'fail', source })
