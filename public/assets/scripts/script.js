@@ -65,6 +65,7 @@ function openPopup(event) {
   const popup = document.querySelector(".popup");
   document.body.classList.toggle("popuped");
   popup.classList.toggle("open");
+  document.querySelector(".popup form > label").focus();
   window.formSource = source;
 }
 
@@ -127,11 +128,10 @@ function initGoUp() {
 
   let flag = false;
   let trottle = false;
+  let timeout = null;
   window.onscroll = function() {
-    if (!trottle) {
-      setTimeout(() => { trottle = !trottle }, 150);
-    } else {
-      trottle = !trottle;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => { 
       if (window.scrollY > window.innerHeight / 1.2 && flag === false) {
         flag = !flag;
         goUpbutton.classList.add('visible')
@@ -139,8 +139,22 @@ function initGoUp() {
         flag = !flag;
         goUpbutton.classList.remove('visible')
       }
-    }
+    }, 100);
   }
+  // window.onscroll = function() {
+  //   if (!trottle) {
+  //     setTimeout(() => { trottle = !trottle }, 150);
+  //   } else {
+  //     trottle = !trottle;
+  //     if (window.scrollY > window.innerHeight / 1.2 && flag === false) {
+  //       flag = !flag;
+  //       goUpbutton.classList.add('visible')
+  //     } else if (window.scrollY < window.innerHeight / 1.2 && flag === true) {
+  //       flag = !flag;
+  //       goUpbutton.classList.remove('visible')
+  //     }
+  //   }
+  // }
   goUpbutton.onclick = function(event) {
     event.stopPropagation();
 

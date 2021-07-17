@@ -367,21 +367,18 @@
     })(window,document,'script','dataLayer','GTM-N2ZJ2T4');
   </script>
   <script>
-  const options = {
-    root: document.body,
-    rootMargin: '50px 0px 0px 0px',
-    threshold: 0
-  }
-  const iframe = document.querySelector('.contacts__map iframe');
+    const options = {
+      root: document.body,
+      rootMargin: '50px 0px 0px 0px',
+      threshold: 0
+    }
+    const iframe = document.querySelector('.contacts__map iframe');
 
+    let observer = new IntersectionObserver(function() {
+      iframe.src = iframe.dataset.src;
+    }, options);
 
-  let observer = new IntersectionObserver(function() {
-    iframe.src = iframe.dataset.src;
-  }, options);
-
-  observer.observe(iframe);
-
-    
+    observer.observe(iframe);
   </script>
 </body>
 

@@ -43,11 +43,14 @@ body.nav__menu-opened {
   padding: 10px 10px 20px;
   background-color: var(--gray6);
   box-shadow: 4px 0 20px 5px black;
-  transition: transform 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  /* transform: translateY(0); */
+  /* transform: translateY(-100%) rotateY(1.2rad); */
 }
 
 .nav__list.closed {
-  transform: translateY(-100%) rotateY(1.2rad);
+  top: -100%;
+  bottom: 100%;
 }
 
 .nav__item {
