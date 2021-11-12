@@ -34,6 +34,7 @@ function submitForm(event) {
   fetch("/lead", {
       method: "POST",
       body: JSON.stringify({
+        source,
         name,
         phone,
       }),
@@ -106,7 +107,7 @@ function initNavList() {
       document.body.classList.remove("nav__menu-opened");
     })
   });
-};
+}
 
 function initPopup() {
   const popup = document.querySelector(".popup");
@@ -121,7 +122,7 @@ function initPopup() {
     popup.classList.toggle("open");
     document.body.classList.toggle("popuped");
   });
-};
+}
 
 function initGoUp() {
   const goUpbutton = document.querySelector(".go-up");
@@ -163,7 +164,7 @@ function initGoUp() {
       behavior: 'smooth',
     })
   }
-};
+}
 
 window.addEventListener("DOMContentLoaded", (event) => {
   initNavList();
