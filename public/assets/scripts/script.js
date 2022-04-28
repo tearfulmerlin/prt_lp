@@ -34,7 +34,7 @@ document.forms[0].onsubmit = function submitForm(event) {
   fetch("/lead", {
       method: "POST",
       body: JSON.stringify({
-        source,
+        srce: source,
         name,
         phone,
       }),
