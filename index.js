@@ -39,10 +39,10 @@ app.use(compression());
 
 app.post('/lead', function(req, res) {
     sendMessageBot(req.body)
-        .then((tgResponce) => {
-            res.json({ message: 'success' });
+        .then((tgResponse) => {
+            res.json({ message: 'success', tgResponse });
         }).catch((err) => {
-            res.status(err.response.status).json({ staus: 'error' })
+            res.status(err.response.status).json({ staus: 'error', err })
         });
 });
 
