@@ -30,17 +30,17 @@ app.use(sslRedirect(['production'], 301));
 app.use(bodyParser.json({ limit: '0.5mb', type: 'application/json' }));
 app.use(bodyParser.urlencoded({ limit: '0.5mb', extended: false, parameterLimit: 50000 }))
 app.use(express.static('public', {
-  maxAge: '432000000',
+    maxAge: '432000000',
 }));
 app.use(compression());
 
 app.post('/lead', function(req, res) {
     sendMessageBot(req.body)
-        .then((tgResponse) => {
-            res.json({ message: 'success', tgResponse });
+        .then((tgResponce) => {
+            res.json({ message: 'success' });
         }).catch((err) => {
-            res.status(err.response.status).json({ staus: 'error', err })
-        });
+        res.status(err.response.status).json({ staus: 'error' })
+    });
 });
 
 
