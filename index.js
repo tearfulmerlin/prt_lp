@@ -16,7 +16,7 @@ const sendMessageBot = async(data) => axios.post(
         parse_mode: 'Markdown',
         text: `
           *Нова заявка*
-          ${data.srce}
+
           Ім'я:
           ${data.name}
           
