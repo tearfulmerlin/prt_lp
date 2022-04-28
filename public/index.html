@@ -10,7 +10,7 @@
   <meta
     name="description"
     content="
-      Ремонт великої та дрібної побутової техніки в Бердичеві та районі 
+      Ремонт великої та дрібної побутової техніки в Бердичеві та районі
       ➤ Телефон ☎ 067 144-72-94 ✓ Безкоштовна діагностика ✓ Гарантія на ремонт.
     ">
   <link rel="icon" type="image/png" href="assets/images/icon.png"/>
@@ -43,18 +43,18 @@
           />
         </a>
         <nav class="navigation">
-          <a href="javascript:void(0)" class="menu_icon tablet-hidden desktop-hidden">
+          <button class="menu_icon tablet-hidden desktop-hidden" aria-hidden="true">
             <span class="menu_line"></span>
             <span class="menu_line"></span>
             <span class="menu_line"></span>
-          </a>
+          </button>
           <ul class="nav__list closed">
-            <a href="#" class="nav__link nav__close tablet-hidden desktop-hidden" aria-label="закрити меню">
+            <button class="nav__link nav__close tablet-hidden desktop-hidden" aria-hidden="true">
               <span class="nav__close-icon">
                 <span class="nav__close-line1"></span>
                 <span class="nav__close-line2"></span>
               </span>
-            </a>
+            </button>
             <li class="nav__item">
               <a href="javascript:void(0)" class="nav__link" data-id="services">
                 Послуги
@@ -82,7 +82,11 @@
         </div>
       </header>
       <div class="utp__content section-wrapper content">
-        <p class="utp__company">ТОВ “ПОБУТРАДІОТЕХНІКА”</p>
+        <p class="utp__company">
+          ТОВ “ПОБУТРАДІОТЕХНІКА”
+          <br>
+          <span class="war-notice">Працюємо у період<br>воєнного стану</span>
+        </p>
         <h1 class="utp__title">
           <span class="utp__title__lvl1">Ремонт</span> <br />
           <span class="utp__title__lvl2">
@@ -99,7 +103,7 @@
           </span>
         </h1>
         <div class="utp__buttons">
-          <button class="btn btn_primary lead" data-source="utp_lead" onclick="openPopup(event)">
+          <button class="btn btn_primary lead" data-source="utp_lead">
 							Залишити заявку
 						</button>
           <a href="#contacts" class="btn btn_secondary map">
@@ -195,7 +199,7 @@
             </div>
           </li>
         </ul>
-        <button class="btn btn_primary lead" data-source="device_lead" onclick="openPopup(event)">
+        <button class="btn btn_primary lead" data-source="device_lead">
           Залишити заявку на ремонт
         </button>
       </div>
@@ -227,7 +231,7 @@
             </div>
           </li>
         </ul>
-        <button class="btn btn_primary lead" data-source="waranty_lead" onclick="openPopup(event)">
+        <button class="btn btn_primary lead" data-source="waranty_lead">
 						Залишити заявку на ремонт
 					</button>
       </div>
@@ -273,18 +277,18 @@
         </ul>
         <div class="sattv__providers tablet-hidden desktop-hidden">
           <img width="69" height="71" src="./assets/images/viasat.png" alt="" class="sattv__viasat" loading="lazy" />
-          <img width="84" height="71"src="./assets/images/extratv.png" alt="" class="sattv__extratv" loading="lazy" />
+          <img width="84" height="71" src="./assets/images/extratv.png" alt="" class="sattv__extratv" loading="lazy" />
         </div>
         <div class="sattv__buttons">
-          <button class="btn btn_actions btn_positive map" data-source="sattv_map" onclick="openPopup(event)">
+          <button class="btn btn_actions btn_positive map" data-source="sattv_map">
 							Дізнатись більше
 						</button>
-          <button class="btn btn_details btn_primary lead" data-source="sattv_lead" onclick="openPopup(event)">
+          <button class="btn btn_details btn_primary lead" data-source="sattv_lead">
 							Залишити заявку
 						</button>
         </div>
       </div>
-    </section> 
+    </section>
     <section class="contacts" id="contacts">
       <div class="contacts__bg"></div>
       <div class="content">
@@ -300,7 +304,7 @@
         </ul>
         <div class="contacts__hours">
           <h3 class="hours__title">Графік роботи:</h3>
-          <div class="hours__workdays">Пн - Пт: 10:00 - 17:00</div>
+          <div class="hours__workdays">Пн - Пт: 10:00 - 15:00</div>
           <div class="hours__saturday">Сб: 10:00 - 13:00</div>
           <div class="hours__sunday">Нд: вихідний</div>
         </div>
@@ -308,6 +312,7 @@
       <div class="contacts__map">
         <iframe
           data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d642.679668810225!2d28.606319829263235!3d49.885309462812856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472cfbc33ac2576f%3A0x57cae2195b12abac!2z0J_QvtCx0YPRgtGA0LDQtNGW0L7RgtC10YXQvdGW0LrQsCAtINCR0LXRgNC00LjRh9GW0LI!5e0!3m2!1sen!2sua!4v1623748090489!5m2!1sen!2sua"
+          title="ТОВ 'Побутрадіотехніка' на гугл картах"
           width="100%"
           height="400"
           style="border: 0"
@@ -322,7 +327,6 @@
     <div class="wrapper" onclick=""></div>
     <form
       class="popup__form"
-      onsubmit="submitForm(event)"
       data-source="default"
     >
       <div class="error submition-error">Сталася помилка!</div>
@@ -358,14 +362,9 @@
     <span class="go-up__arrow"></span>
   </a>
 
+  <link rel="preload" href="./assets/scripts/script.js" as="script">
   <script src="./assets/scripts/script.js" defer></script>
-  <script async>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N2ZJ2T4');
-  </script>
+
   <script>
     const options = {
       root: document.body,
