@@ -1,5 +1,3 @@
-@import './colors.css';
-@import './style-common.css';
 .tablet-hidden {
   display: none!important;
 }
@@ -53,11 +51,8 @@
 /* utp */
 
 .utp {
-  background: url(../assets/utp-bg.jpg) 70% 50%;
-  background-size: cover;
+  --utp-padding: 0 35px 125px;
   max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 35px 125px;
 }
 
 .header {
@@ -79,18 +74,17 @@
 }
 
 .header__contacts .phone:before {
-  content: url(../assets/phone_icon.png);
+  content: url(../images/phone_icon.png);
 }
 
-.company {
-  color: var(--dark-section-text);
-  margin: 20px 0 40px;
-  font-size: 24px;
+.utp__company {
+  --utp_company_margin: 40px 0 70px;
+  --utp_company_font-size: 24px;
 }
 
 .utp__title {
   color: var(--dark-section-text);
-  text-shadow: 0 0px 15px black;
+  text-shadow: 0 0 15px black;
   text-transform: uppercase;
   line-height: 1.4;
   letter-spacing: 0.9px;
@@ -110,9 +104,6 @@
   font-weight: 500;
 }
 
-.utp__buttons {
-  display: flex;
-}
 
 .devices {
   background: linear-gradient(179.07deg, rgba(224, 224, 224, 0.55) 0.8%, rgba(196, 196, 196, 0) 117.22%);
@@ -140,40 +131,48 @@
 .device__icon {
   height: 64px;
   width: 64px;
-  background-image: url(../assets/device_icons.png);
+  background-image: url(../images/device_icons.png);
   margin-right: 15px;
-}
-
-.pannel {
-  background-position: -256px 0;
-}
-
-.combine {
-  background-position: -192px 0;
-}
-
-.dryer {
-  background-position: -128px 0;
-}
-
-.washmachine {
-  background-position: -64px 0;
 }
 
 .fridge {
   background-position: 0 0;
 }
 
-.tv {
-  background-position: 64px 0;
+.washmachine {
+  background-position: -64px 0;
+}
+
+.dryer {
+  background-position: -128px 0;
 }
 
 .microwave {
-  background-position: 128px 0;
+  background-position: -192px 0;
+}
+
+.pannel {
+  background-position: -256px 0;
 }
 
 .vacuum {
-  background-position: 256px 0;
+  background-position: -320px 0;
+}
+
+.combine {
+  background-position: -384px 0;
+}
+
+.tv {
+  background-position: -448px 0;
+}
+
+.boyler {
+  background-position: -512px 0;
+}
+
+.heating {
+  background-position: -576px 0;
 }
 
 .device__title {
@@ -207,7 +206,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: url('../assets/shield.png') no-repeat 100% 50%;
+  background: url('../images/shield.png') no-repeat 100% 50%;
   z-index: -1;
 }
 .waranty__list {
@@ -248,7 +247,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: url('../assets/sattvbg.png') no-repeat 100% 50%;
+  background: url('../images/sattvbg.png') no-repeat 100% 50%;
   z-index: -1;
 }
 .sattv__list {
@@ -295,7 +294,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url(../assets/footer_bg.jpg);
+  background-image: url(../images/footer_bg.jpg);
   z-index: -1;
 }
 
