@@ -30,5 +30,5 @@ exports.default = parallel(
 	() => replaceImagePaths({path: 'public/assets/styles/*', options: { base: './public' } }, BUILD_DIR),
 	() => copy({ path: ['prt-server.js', 'package.json', 'package-lock.json'], options: { base: '.' } }, BUILD_DIR),
 	() => convertToWebP({ path: ['public/assets/images/*.png', 'public/assets/images/*.jpg'] }, `${BUILD_DIR}/assets/images/`),
-	() => copy({ path: ['public/assets/**/*', '!public/assets/images/*', '!public/assets/styles/*'], options: { base : './public' } }, BUILD_DIR)
+	() => copy({ path: ['public/assets/**/*', '!public/assets/images/*.jpg', '!public/assets/images/*.png', '!public/assets/styles/*', 'public/robots.txt'], options: { base : './public' } }, BUILD_DIR)
 )
