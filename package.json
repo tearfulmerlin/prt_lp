@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
-    "start": "node index.js",
+    "start": "node prt-server.js",
     "nodemon": "nodemon index.js"
   },
   "repository": {
