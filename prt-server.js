@@ -1,7 +1,4 @@
 const express = require('express');
-const sslRedirect = require('heroku-ssl-redirect').default;
-const bodyParser = require('body-parser');
-const compression = require('compression');
 const axios = require('axios');
 
 const app = express();
@@ -25,14 +22,8 @@ const sendMessageBot = async(data) => axios.post(
         `,
     }
 );
-
-app.use(sslRedirect(['production'], 301));
-app.use(bodyParser.json({ limit: '0.5mb', type: 'application/json' }));
-app.use(bodyParser.urlencoded({ limit: '0.5mb', extended: false, parameterLimit: 50000 }))
-app.use(express.static('public', {
-    maxAge: '432000000',
-}));
-app.use(compression());
+app.use(express.json({ limit: '0.5mb', type: 'application/json' }));
+app.use(express.urlencoded({ limit: '0.5mb', extended: false, parameterLimit: 50000 }))
 
 app.post('/lead', function(req, res) {
     sendMessageBot(req.body)

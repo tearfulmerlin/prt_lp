@@ -3,6 +3,7 @@ const webp = require('gulp-webp');
 const replace = require("gulp-replace");
 
 const BUILD_DIR = '.build';
+const BUILD_HTML = '.build/html';
 
 function convertToWebP(s, d) {
 	return src(s.path, s.options)
@@ -24,11 +25,9 @@ function copy(s, d) {
 		.pipe(dest(d));
 }
 
-// exports.default = replaceImagePaths
 exports.default = parallel(
-	() => replaceImagePaths({ path: ['public/index.html'] }, BUILD_DIR),
-	() => replaceImagePaths({path: 'public/assets/styles/*', options: { base: './public' } }, BUILD_DIR),
-	() => copy({ path: ['prt-server.js', 'package.json', 'package-lock.json'], options: { base: '.' } }, BUILD_DIR),
-	() => convertToWebP({ path: ['public/assets/images/*.png', 'public/assets/images/*.jpg'] }, `${BUILD_DIR}/assets/images/`),
-	() => copy({ path: ['public/assets/**/*', '!public/assets/images/*.jpg', '!public/assets/images/*.png', '!public/assets/styles/*', 'public/robots.txt'], options: { base : './public' } }, BUILD_DIR)
+	() => replaceImagePaths({ path: ['public/*.html'] }, BUILD_HTML),
+	() => replaceImagePaths({path: 'public/assets/styles/*', options: { base: './public' } }, BUILD_HTML),
+	() => convertToWebP({ path: ['public/assets/images/*.png', 'public/assets/images/*.jpg'] }, `${BUILD_HTML}/assets/images/`),
+	() => copy({ path: ['public/assets/**/*', '!public/assets/images/*.jpg', '!public/assets/images/*.png', '!public/assets/styles/*', 'public/robots.txt'], options: { base : './public' } }, BUILD_HTML),
 )
