@@ -78,6 +78,35 @@ form {
   max-width: 320px;
 }
 
+.submition-message {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  padding: 15px 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebb6b6;
+}
+.submition-message.show {
+  display: flex;
+}
+
+.submition-message.error {
+  background-color: #ebb6b6;
+}
+
+.submition-message.success {
+  background-color: #b6ebbf;
+}
+
+.submition-message button {
+  margin-top: 15px;
+}
+
 .submition-error {
   position: absolute;
   top: 20px;

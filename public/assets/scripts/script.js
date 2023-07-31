@@ -1,73 +1,114 @@
-const createTimeout = (function createTimeoutCreator() {
-  let timeOut;
+window.addEventListener('click', (event) => {
+  const target = event.target;
 
-  return function({ success, disable}) {
-    if (!timeOut) {
-      timeOut = setTimeout(() => {
-        success.forEach((el) => {
-          el.classList.remove('show');
-        });
-        disable.forEach((el) => {
-          el.disabled=false;
-        });
+  console.dir(target.className);
+  const classNames = target.className.split(' ');
 
-        timeOut = null;
-      }, 5000);
-    }
+  /* POPUP */
+  if (classNames.includes('btn') && classNames.includes('lead')) {
+    openPopup(event)
+    return;
   }
-})();
 
-document.forms[0].onsubmit = function submitForm(event) {
-  event.preventDefault();
-  const form = event.target;
-  const source = window.formSource;
-  const formData = new FormData(form);
-  const name = formData.get("name");
-  const phone = formData.get("phone");
-  const errorMsg = document.querySelector('.submition-error');
-  const successMsg = document.querySelector('.submition-success');
-  [...document.forms[0].children].find(el => el.type === 'submit').disabled = true;
+  if (classNames.includes('wrapper')) {
+    closePopup()
+    return;
+  }
 
-  errorMsg.classList.remove('show');
-  successMsg.classList.remove('show');
+  if (classNames.includes('submition_ok')) {
+    hideSubmitionMessage(event)
+    return;
+  }
+  /* POPUP END*/
 
-  fetch("/lead", {
-      method: "POST",
-      body: JSON.stringify({
-        source,
-        name,
-        phone,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
-    .then(data => {
-      if (data.status === 200) {
-        successMsg.classList.toggle('show');
-        createTimeout({ success: [successMsg], disable: [form.children[5]]});
-        if (window.dataLayer) dataLayer.push({event: 'lead', action: 'success', source})
-      } else {
-        errorMsg.classList.toggle('show');
-        createTimeout({ success: [errorMsg], disable: [form.children[5]]});
-        if (window.dataLayer) dataLayer.push({event: 'lead', action: 'fail', source })
-      }
-    })
-    .catch(() => {
-      errorMsg.classList.toggle('show');
-      createTimeout({ success: [errorMsg], disable: [form.children[5]]});
-      if (window.dataLayer) dataLayer.push({event: 'lead', action: 'fail', source })
+  /* SCROLL */
+  if (classNames.includes('go-up') && classNames.includes('visible') || classNames.includes('go-up__arrow')) {
+    event.stopPropagation();
+
+    scroll({
+      top: 0,
+      behavior: 'smooth',
     });
+    return;
+  }
+  /* SCROLL END */
+});
+
+function hideSubmitionMessage(event) {
+  const submitionMessage = document.querySelector('.submition-message');
+
+  submitionMessage.classList.remove('show')
 }
 
 function openPopup(event) {
   const source = event.target.dataset.source;
   const popup = document.querySelector(".popup");
+
   document.body.classList.toggle("popuped");
   popup.classList.toggle("open");
+
   document.querySelector(".popup form > label").focus();
   window.formSource = source;
 }
+
+function closePopup() {
+  const popup = document.querySelector(".popup");
+
+  popup.classList.toggle("open");
+  document.body.classList.toggle("popuped");
+}
+
+window.addEventListener('submit', submitForm);
+
+function submitForm(event) {
+  event.preventDefault();
+
+  const formData = new FormData(event.target);
+  const source = window.formSource;
+  const name = formData.get("name");
+  const phone = formData.get("phone");
+  const submitionMessage = document.querySelector('.submition-message');
+  const submitionTitle = document.querySelector('.submition-title');
+
+  fetch("/lead", {
+    method: "POST",
+    body: JSON.stringify({
+      source,
+      name,
+      phone,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
+  .then(data => {
+    if (data.status === 200) {
+      submitionMessage.classList.remove('error');
+      submitionMessage.classList.add('success');
+      submitionTitle.textContent = 'Ваша заявка успішно відправлена!';
+      submitionMessage.classList.add('show');
+      event.target.reset();
+
+      if (window.dataLayer) dataLayer.push({event: 'lead', action: 'success', source})
+    } else {
+      submitionMessage.classList.remove('success');
+      submitionMessage.classList.add('error');
+      submitionTitle.textContent = 'Сталася помилка!';
+      submitionMessage.classList.add('show');
+
+      if (window.dataLayer) dataLayer.push({event: 'lead', action: 'fail', source })
+    }
+  })
+  .catch(() => {
+    submitionMessage.classList.remove('success');
+    submitionMessage.classList.add('error');
+    submitionTitle.textContent = 'Сталася помилка!';
+    submitionMessage.classList.add('show');
+
+    if (window.dataLayer) dataLayer.push({event: 'lead', action: 'fail', source })
+  });
+}
+
 function initNavList() {
   const navList = document.querySelector(".nav__list");
   const menuIcon = document.querySelector(".menu_icon");
@@ -106,32 +147,14 @@ function initNavList() {
   });
 }
 
-function initPopup() {
-  const openPopupBtns = document.querySelectorAll('.btn.lead');
-
-  openPopupBtns.forEach((btn) => btn.onclick = openPopup);
-
-  console.log(openPopupBtns)
-  const popup = document.querySelector(".popup");
-  const popupWrapper = document.querySelector(".popup");
-  const popupForm = document.querySelector(".popup__form");
-
-  popupForm.onclick = (event) => {
-    event.stopPropagation();
-  };
-
-  popupWrapper.onclick = () => {
-    popup.classList.toggle("open");
-    document.body.classList.toggle("popuped");
-  };
-}
-
 function initGoUp() {
   const goUpbutton = document.querySelector(".go-up");
 
   let flag = false;
   let timeout = null;
-  window.onscroll = function() {
+
+  window.addEventListener('scroll', scrollHandler, { passive: true });
+  function scrollHandler() {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
       if (window.scrollY > window.innerHeight / 1.2 && flag === false) {
@@ -143,20 +166,10 @@ function initGoUp() {
       }
     }, 100);
   }
-
-  goUpbutton.onclick = function(event) {
-    event.stopPropagation();
-
-    scroll({
-      top: 0,
-      behavior: 'smooth',
-    })
-  }
 }
 
 window.onload = () => {
   initNavList();
-  initPopup();
   initGoUp();
 
   (function(w,d,s,l,i){

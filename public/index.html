@@ -15,7 +15,8 @@
     ">
   <link rel="icon" type="image/png" href="assets/images/icon.png"/>
   <link rel="apple-touch-icon" href="assets/images/icon57.png"/>
-  <link rel="preload" as="image" href="assets/images/utp-bg.jpg" imagesrcset="./assets/images/utp-bg-mobile.jpg 400w, ./assets/images/utp-bg-768w.jpg 768w, ./assets/images/utp-bg-900w.jpg 900w, ./assets/images/utp-bg.jpg 901w" imagesizes="100vw">
+  <!-- <link rel="preload" as="image" href="assets/images/utp-bg.jpg" imagesrcset="./assets/images/utp-bg-mobile.jpg 400w, ./assets/images/utp-bg-768w.jpg 768w, ./assets/images/utp-bg-900w.jpg 900w, ./assets/images/utp-bg.jpg 901w" imagesizes="100vw"> -->
+  <link rel="preload" as="image" href="assets/images/utp-bg.jpg" imagesizes="100vw">
   <link rel="preload" as="image" href="assets/images/header-logo.png">
 
   <link rel="stylesheet preload" as="style" href="./assets/styles/colors.css"/>
@@ -329,8 +330,10 @@
       class="popup__form"
       data-source="default"
     >
-      <div class="error submition-error">Сталася помилка!</div>
-      <div class="success submition-success">Ваша заявка успішно відправлена!</div>
+      <div class="submition-message">
+        <h2 class="submition-title"></h2>
+        <button type="button" class="btn btn_secondary submition_ok">Ок</button>
+      </div>
       <h2 class="popup__title">Залиште свої контактні данні</h2>
       <label>
         Ім'я
